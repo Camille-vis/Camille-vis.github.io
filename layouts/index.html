@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="page">
+  <div class="header">
+    <div class="avatar">{{ .Params.avatar_initials | default "?" }}</div>
+    <div>
+      <h1>{{ .Site.Title }}</h1>
+      <p class="tagline">{{ .Params.tagline }}</p>
+    </div>
+  </div>
+
+  <div class="bio">{{ .Content }}</div>
+
+  <div class="contact">
+    <span>{{ .Params.email }}</span>
+    <span><a href="{{ .Params.github }}">{{ .Params.github }}</a></span>
+  </div>
+
+  <div class="section">
+    <p class="label">项目经历（占位插槽，先空着）</p>
+  </div>
+
+  {{ if .Site.Data.patents }}
+  <div class="section">
+    <p class="label">专利</p>
+    {{ range .Site.Data.patents }}
+    <p class="patent">{{ .name }} <span class="muted">· {{ .year }}</span></p>
+    {{ end }}
+  </div>
+  {{ end }}
+
+  <div class="section">
+    <h2>博客</h2>
+    {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
+    <div class="post-row">
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+      <span class="muted">{{ .Date.Format "2006-01-02" }}</span>
+    </div>
+    {{ end }}
+  </div>
+</div>
+{{ end }}

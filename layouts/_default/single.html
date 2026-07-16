@@ -1,0 +1,14 @@
+{{ define "main" }}
+<div class="page">
+<a href="/" class="back">← 首页</a>
+<h1>{{ .Title }}</h1>
+<p class="muted">{{ .Date.Format "2006-01-02" }}{{ if .Params.tags }} · {{ delimit .Params.tags ", " }}{{ end }}</p>
+<div class="content">{{ .Content }}</div>
+</div>
+{{ if .Params.math }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
+<script>document.addEventListener("DOMContentLoaded", function() { renderMathInElement(document.body); });</script>
+{{ end }}
+{{ end }}

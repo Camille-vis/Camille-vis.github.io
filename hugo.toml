@@ -1,0 +1,9 @@
+baseURL = "https://lichengping.com/"
+languageCode = "zh-cn"
+title = "LI Chengping"
+
+[params]
+  description = "LI Chengping 的个人主页"
+
+[markup.goldmark.renderer]
+  unsafe = true

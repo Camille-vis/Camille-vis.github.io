@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<title>{{ .Site.Title }}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
+{{ block "head" . }}{{ end }}
+</head>
+<body>
+<main>
+{{ block "main" . }}{{ end }}
+</main>
+<!-- TODO: 注册 GoatCounter 账号后，把下面的占位地址换成真实的，再取消注释
+<script data-goatcounter="https://占位.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+-->
+</body>
+</html>
