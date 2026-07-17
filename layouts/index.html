@@ -5,15 +5,22 @@
     <div>
       <h1>{{ .Site.Title }}</h1>
       <p class="tagline">{{ .Params.tagline }}</p>
+      {{ if .Params.email }}<p class="email">{{ .Params.email }}</p>{{ end }}
     </div>
   </div>
 
+  {{ if .Params.quote }}
+  <p class="quote">"{{ .Params.quote }}"</p>
+  {{ if .Params.quote_source }}<p class="quote-source">— {{ .Params.quote_source }}</p>{{ end }}
+  {{ end }}
+
   <div class="bio">{{ .Content }}</div>
 
+  {{ if .Params.github }}
   <div class="contact">
-    <span>{{ .Params.email }}</span>
     <span><a href="{{ .Params.github }}">{{ .Params.github }}</a></span>
   </div>
+  {{ end }}
 
   {{ if .Site.Data.experience }}
   <div class="section">
@@ -26,7 +33,7 @@
 
   {{ if .Site.Data.patents }}
   <div class="section">
-    <p class="label">Patents</p>
+    <p class="label">Patents / Papers / Publications</p>
     {{ range .Site.Data.patents }}
     <p class="patent">{{ .name }} <span class="muted">· {{ .year }}</span></p>
     {{ end }}

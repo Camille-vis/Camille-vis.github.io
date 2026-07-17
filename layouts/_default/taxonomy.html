@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="page">
+<a href="/" class="back">← Home</a>
+<h1>Tags</h1>
+{{ range .Pages }}
+<div class="post-row">
+  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+  <span class="muted">{{ len .Pages }} post{{ if ne (len .Pages) 1 }}s{{ end }}</span>
+</div>
+{{ end }}
+</div>
+{{ end }}

@@ -2,8 +2,8 @@
 body {
   margin: 0;
   font-family: -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
-  color: #222;
-  background: #fff;
+  color: #22201c;
+  background: #f7f3ea;
 }
 .page {
   max-width: 640px;
@@ -26,21 +26,26 @@ body {
 h1 { font-size: 22px; margin: 0 0 4px; font-weight: 600; }
 h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
 .tagline { margin: 0; font-size: 14px; color: #666; }
+.email { margin: 4px 0 0; font-size: 13px; color: #6b5a4a; }
+.quote { font-style: italic; font-size: 14px; color: #6b5a4a; margin: 0 0 2px; }
+.quote-source { font-size: 12px; color: #948a78; margin: 0 0 1.5rem; }
 .bio { font-size: 15px; margin-bottom: 1.5rem; }
 .contact { display: flex; gap: 20px; font-size: 13px; color: #555; margin-bottom: 20px; }
-.contact a { color: #3a5a8c; text-decoration: none; }
-.section { border-top: 1px solid #eee; padding-top: 14px; margin-bottom: 20px; }
-.label { font-size: 13px; color: #999; margin: 0 0 6px; }
+.contact a { color: #bc5e3c; text-decoration: none; }
+.section { border-top: 1px solid #e6ddc9; padding-top: 14px; margin-bottom: 20px; }
+.label { font-size: 13px; color: #bc5e3c; margin: 0 0 6px; font-weight: 600; }
 .patent { font-size: 14px; margin: 0 0 4px; }
-.muted { color: #999; font-size: 12px; }
+.muted { color: #6b5f4d; font-size: 12px; }
 .post-row {
   display: flex;
   justify-content: space-between;
   padding: 10px 0;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #e6ddc9;
   font-size: 15px;
 }
-.post-row a { color: #222; text-decoration: none; }
+.post-row a { color: #22201c; text-decoration: none; }
 .post-row a:hover { text-decoration: underline; }
-.back { font-size: 13px; color: #3a5a8c; text-decoration: none; display: inline-block; margin-bottom: 1rem; }
+.back { font-size: 13px; color: #bc5e3c; text-decoration: none; display: inline-block; margin-bottom: 1rem; }
 .content { font-size: 15px; line-height: 1.7; }
+.tag-link { color: #bc5e3c; text-decoration: none; }
+.tag-link:hover { text-decoration: underline; }
