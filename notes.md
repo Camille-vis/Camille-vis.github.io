@@ -26,6 +26,11 @@
 - **页面文案英文化**：Patents / Experience / Blog / Home 等界面标签改成英文，中文只保留用户需要的地方（正文可中英混写）。`hugo.toml` 的 `languageCode` 改成 `en`，`<html lang>` 同步改。
 - **"项目经历"占位插槽改成数据驱动**：新增 `data/experience.yaml`，跟 `patents.yaml` 同一套路（role/org/period 字段），首页模板改成 `{{ if .Site.Data.experience }}` 循环渲染，不再是写死的空文字。
 
+## 决策记录（追加，头像 + 首篇博文模板）
+
+- **头像从"CSS 首字母圆圈"改成真实图片文件**：`static/img/avatar.png` 现在是一张占位图（Claude 生成的通用轮廓图形，非真人照片），模板改成 `<img>` 标签指向这个文件。以后拿到真实照片，**直接用同名文件覆盖 `static/img/avatar.png` 就行，不用改任何代码**。
+- **新增 `archetypes/blog.md`**：Hugo 的标准机制，运行 `hugo new blog/文件名.md` 会自动照这个模板生成新文章（自动填日期、根据文件名猜标题），比手动复制别的文章文件更规范，以后写新博客用这个命令。
+
 ## 已知限制
 
 - **骨架未经过实际 `hugo build` 验证。** Claude 的沙盒环境网络策略挡掉了 github.com release 二进制下载和 Ubuntu 官方 hugo 包镜像（403/连接被拦截），无法在这里装 Hugo 跑一次真实编译。模板是按标准 Hugo 模板语法（`baseof`/`block` 继承模式、`.Site.RegularPages`、front matter 类型）手动核对写的，逻辑上应该没问题，但没有"跑起来看过"这层保证。**用户本机装好 Hugo 后第一件事应该是跑一次 `hugo server -D`，肉眼确认没有报错、页面结构对得上**，如果有模板报错再反馈回来改。

@@ -1,7 +1,7 @@
 {{ define "main" }}
 <div class="page">
   <div class="header">
-    <div class="avatar">{{ .Params.avatar_initials | default "?" }}</div>
+    <img class="avatar" src="{{ "img/avatar.png" | relURL }}" alt="{{ .Site.Title }}">
     <div>
       <h1>{{ .Site.Title }}</h1>
       <p class="tagline">{{ .Params.tagline }}</p>
