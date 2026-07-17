@@ -1,5 +1,11 @@
 # Same pattern as patents.yaml — edit or add entries yourself, no template changes needed.
 # Delete this placeholder entry before it goes live for real.
-- role: "Role title (placeholder)"
-  org: "Organization (placeholder)"
-  period: "20XX–present"
+- role: "Software Engineer & FAE Team Lead"
+  org: "a semiconductor company"
+  period: "2023–2024"
+- role: "R&D Team Lead (Software, Hardware & Gas)"
+  org: "a laser company"
+  period: "2024–2025"
+- role: "Researcher & Market Manager"
+  org: "a sensor company"
+  period: "2025–present"
