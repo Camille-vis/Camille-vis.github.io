@@ -1,9 +1,9 @@
 baseURL = "https://lichengping.com/"
-languageCode = "zh-cn"
+languageCode = "en"
 title = "LI Chengping"
 
 [params]
-  description = "LI Chengping 的个人主页"
+  description = "LI Chengping's personal homepage"
 
 [markup.goldmark.renderer]
   unsafe = true

@@ -15,13 +15,18 @@
     <span><a href="{{ .Params.github }}">{{ .Params.github }}</a></span>
   </div>
 
+  {{ if .Site.Data.experience }}
   <div class="section">
-    <p class="label">项目经历（占位插槽，先空着）</p>
+    <p class="label">Experience</p>
+    {{ range .Site.Data.experience }}
+    <p class="patent">{{ .role }}, {{ .org }} <span class="muted">· {{ .period }}</span></p>
+    {{ end }}
   </div>
+  {{ end }}
 
   {{ if .Site.Data.patents }}
   <div class="section">
-    <p class="label">专利</p>
+    <p class="label">Patents</p>
     {{ range .Site.Data.patents }}
     <p class="patent">{{ .name }} <span class="muted">· {{ .year }}</span></p>
     {{ end }}
@@ -29,7 +34,7 @@
   {{ end }}
 
   <div class="section">
-    <h2>博客</h2>
+    <h2>Blog</h2>
     {{ range first 10 (where .Site.RegularPages "Section" "blog") }}
     <div class="post-row">
       <a href="{{ .RelPermalink }}">{{ .Title }}</a>

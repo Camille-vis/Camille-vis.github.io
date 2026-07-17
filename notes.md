@@ -21,6 +21,11 @@
 
 见本目录 `hugo.toml` / `content/` / `layouts/` / `static/` / `.github/workflows/deploy.yml`。所有真实数据（邮箱、GitHub 用户名、教育背景、专利条目、bio 正文）均为占位，标注 `占位` 字样，等用户提供真实信息后替换——不编造任何数据。
 
+## 决策记录（追加，用户已上线调试阶段）
+
+- **页面文案英文化**：Patents / Experience / Blog / Home 等界面标签改成英文，中文只保留用户需要的地方（正文可中英混写）。`hugo.toml` 的 `languageCode` 改成 `en`，`<html lang>` 同步改。
+- **"项目经历"占位插槽改成数据驱动**：新增 `data/experience.yaml`，跟 `patents.yaml` 同一套路（role/org/period 字段），首页模板改成 `{{ if .Site.Data.experience }}` 循环渲染，不再是写死的空文字。
+
 ## 已知限制
 
 - **骨架未经过实际 `hugo build` 验证。** Claude 的沙盒环境网络策略挡掉了 github.com release 二进制下载和 Ubuntu 官方 hugo 包镜像（403/连接被拦截），无法在这里装 Hugo 跑一次真实编译。模板是按标准 Hugo 模板语法（`baseof`/`block` 继承模式、`.Site.RegularPages`、front matter 类型）手动核对写的，逻辑上应该没问题，但没有"跑起来看过"这层保证。**用户本机装好 Hugo 后第一件事应该是跑一次 `hugo server -D`，肉眼确认没有报错、页面结构对得上**，如果有模板报错再反馈回来改。

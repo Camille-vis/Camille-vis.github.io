@@ -1,6 +1,6 @@
 {{ define "main" }}
 <div class="page">
-<a href="/" class="back">← 首页</a>
+<a href="/" class="back">← Home</a>
 <h1>{{ .Title }}</h1>
 <p class="muted">{{ .Date.Format "2006-01-02" }}{{ if .Params.tags }} · {{ delimit .Params.tags ", " }}{{ end }}</p>
 <div class="content">{{ .Content }}</div>

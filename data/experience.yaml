@@ -1,0 +1,5 @@
+# Same pattern as patents.yaml — edit or add entries yourself, no template changes needed.
+# Delete this placeholder entry before it goes live for real.
+- role: "Role title (placeholder)"
+  org: "Organization (placeholder)"
+  period: "20XX–present"
