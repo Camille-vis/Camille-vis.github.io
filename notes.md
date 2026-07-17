@@ -31,6 +31,10 @@
 - **头像从"CSS 首字母圆圈"改成真实图片文件**：`static/img/avatar.png` 现在是一张占位图（Claude 生成的通用轮廓图形，非真人照片），模板改成 `<img>` 标签指向这个文件。以后拿到真实照片，**直接用同名文件覆盖 `static/img/avatar.png` 就行，不用改任何代码**。
 - **新增 `archetypes/blog.md`**：Hugo 的标准机制，运行 `hugo new blog/文件名.md` 会自动照这个模板生成新文章（自动填日期、根据文件名猜标题），比手动复制别的文章文件更规范，以后写新博客用这个命令。
 
+## 决策记录（追加，favicon 补做）
+
+- 之前决策记录里写了"favicon 占位实现"但没真的做，现在补上：`static/favicon.ico`（多尺寸）+ `static/favicon.png`（32×32），都是从占位头像图裁的，`baseof.html` 加了对应 `<link rel="icon">`。**你有真实素材时，把方形图发给我，我按同样流程重新生成正确尺寸的 ico/png 替换这两个文件**，不建议你自己转格式（ico 是多分辨率打包格式，直接改文件名不会真的生效）。
+
 ## 已知限制
 
 - **骨架未经过实际 `hugo build` 验证。** Claude 的沙盒环境网络策略挡掉了 github.com release 二进制下载和 Ubuntu 官方 hugo 包镜像（403/连接被拦截），无法在这里装 Hugo 跑一次真实编译。模板是按标准 Hugo 模板语法（`baseof`/`block` 继承模式、`.Site.RegularPages`、front matter 类型）手动核对写的，逻辑上应该没问题，但没有"跑起来看过"这层保证。**用户本机装好 Hugo 后第一件事应该是跑一次 `hugo server -D`，肉眼确认没有报错、页面结构对得上**，如果有模板报错再反馈回来改。
