@@ -1,8 +1,8 @@
 ---
 title: "LI Chengping"
 tagline: " Scientific-vis · Applied physics "
-email: "lichengping.ustc [at] gmail.com"
-avatar_initials: "LC"
+email: "Email : lichengping.ustc [at] gmail.com "
+avatar_initials: "LCP"
 ---
 
 LI Chengping currently works as both an R&D engineer and a 
