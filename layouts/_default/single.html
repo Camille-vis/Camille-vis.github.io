@@ -11,4 +11,8 @@
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/contrib/auto-render.min.js"></script>
 <script defer>window.addEventListener("load", function() { renderMathInElement(document.body); });</script>
 {{ end }}
+{{ if .Params.mermaid }}
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.9.1/mermaid.min.js"></script>
+<script defer>window.addEventListener("load", function() { mermaid.initialize({ startOnLoad: true }); });</script>
+{{ end }}
 {{ end }}
