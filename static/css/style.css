@@ -47,6 +47,12 @@ h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
 .post-row a:hover { text-decoration: underline; }
 .back { font-size: 13px; color: #bc5e3c; text-decoration: none; display: inline-block; margin-bottom: 1rem; }
 .content { font-size: 15px; line-height: 1.7; }
+.content img {
+  display: block;
+  max-width: 50%;
+  height: auto;
+  margin: 1rem auto;
+}
 .tag-link { color: #bc5e3c; text-decoration: none; }
 .tag-link:hover { text-decoration: underline; }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
