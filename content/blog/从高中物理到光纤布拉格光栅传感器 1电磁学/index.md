@@ -1,6 +1,6 @@
 ---
 title: "从高中物理到光纤布拉格光栅传感器 1电磁学"
-date: 2026-07-19
+date: 2026-07-25
 tags: ["FBG"]
 math: true
 mermaid: true
