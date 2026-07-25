@@ -1,0 +1,38 @@
+<svg viewBox="0 0 760 380" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>球面波与平面波的波前形状对比</title>
+<desc>左图是点光源发出的球面波,波前(等相位面)是以点源为中心的一圈圈同心圆,离得越远弧线看起来越平。右图是平面波,波前是一组等间距的平行直线(代表无限大的平面),沿传播方向整体平移,同一个波前上振幅和相位处处相同。</desc>
+<rect x="0" y="0" width="760" height="380" fill="#ffffff"/>
+
+<text font-family="Noto Sans CJK SC" x="190" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">球面波(点光源发出)</text>
+<circle cx="190" cy="200" r="6" fill="#1a1a1a"/>
+<text font-family="Noto Sans CJK SC" x="190" y="225" text-anchor="middle" font-size="12" fill="#6b7280">点光源</text>
+
+<circle cx="190" cy="200" r="40" fill="none" stroke="#2563eb" stroke-width="2"/>
+<circle cx="190" cy="200" r="80" fill="none" stroke="#2563eb" stroke-width="2"/>
+<circle cx="190" cy="200" r="120" fill="none" stroke="#2563eb" stroke-width="2"/>
+<circle cx="190" cy="200" r="160" fill="none" stroke="#2563eb" stroke-width="1.5" opacity="0.6"/>
+
+<text font-family="Noto Sans CJK SC" x="190" y="65" text-anchor="middle" font-size="12" fill="#2563eb">波前 = 一圈圈同心圆(等相位面)</text>
+<text font-family="Noto Sans CJK SC" x="190" y="345" text-anchor="middle" font-size="12" fill="#6b7280">离点源越远,一小块弧线看起来越接近平的</text>
+
+<line x1="380" y1="20" x2="380" y2="360" stroke="#e5e7eb" stroke-width="2"/>
+
+<text font-family="Noto Sans CJK SC" x="570" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">平面波(理想化模型)</text>
+
+<g stroke="#dc2626" stroke-width="2.5">
+<line x1="440" y1="70" x2="440" y2="330"/>
+<line x1="500" y1="70" x2="500" y2="330"/>
+<line x1="560" y1="70" x2="560" y2="330"/>
+<line x1="620" y1="70" x2="620" y2="330"/>
+<line x1="680" y1="70" x2="680" y2="330"/>
+</g>
+<path d="M 420 200 L 700 200" stroke="#1a1a1a" stroke-width="2" marker-end="url(#arrProp)"/>
+<text font-family="Noto Sans CJK SC" x="560" y="230" text-anchor="middle" font-size="12" fill="#1a1a1a">传播方向 z</text>
+
+<text font-family="Noto Sans CJK SC" x="570" y="65" text-anchor="middle" font-size="12" fill="#dc2626">波前 = 一组无限大的平行平面(图中侧视成竖线)</text>
+<text font-family="Noto Sans CJK SC" x="570" y="345" text-anchor="middle" font-size="12" fill="#6b7280">同一竖线上,振幅、相位处处相同,与 x,y 无关</text>
+
+<defs>
+<marker id="arrProp" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1a1a1a"/></marker>
+</defs>
+</svg>

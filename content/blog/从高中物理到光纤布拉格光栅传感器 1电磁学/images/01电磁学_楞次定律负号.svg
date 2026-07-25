@@ -1,0 +1,63 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>法拉第定律负号的物理含义</title>
+<desc>俯视一个圆形线圈,外部磁场B指向读者且增大,选定的正方向dl逆时针对应法线n指向读者,负号导致实际感应电流沿顺时针方向,产生指向纸内的感应磁场,反抗磁通增大,这就是楞次定律。</desc>
+<rect x="0" y="0" width="760" height="420" fill="#ffffff"/>
+
+<!-- Left panel: setup -->
+<text font-family="Noto Sans CJK SC" x="190" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">第一步:选定正方向(约定)</text>
+
+<circle cx="190" cy="210" r="120" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+<!-- dl arrows counterclockwise -->
+<path d="M 190 90 A 120 120 0 0 0 71 190" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrowBlue)"/>
+<path d="M 71 230 A 120 120 0 0 0 150 328" fill="none" stroke="#2563eb" stroke-width="4" marker-end="url(#arrowBlue)"/>
+<text font-family="Noto Sans CJK SC" x="60" y="170" font-size="14" fill="#2563eb" font-weight="600">dl (逆时针,人为选定)</text>
+
+<!-- normal n dot at center -->
+<circle cx="190" cy="210" r="7" fill="#1a1a1a"/>
+<circle cx="190" cy="210" r="3" fill="#ffffff"/>
+<text font-family="Noto Sans CJK SC" x="205" y="205" font-size="14" fill="#1a1a1a">n (⊙ 指向读者,由右手定则从 dl 定出)</text>
+
+<!-- B field dots increasing, scattered -->
+<g fill="#6b7280">
+<circle cx="140" cy="150" r="4"/><circle cx="140" cy="150" r="1.5" fill="#ffffff"/>
+<circle cx="230" cy="150" r="4"/><circle cx="230" cy="150" r="1.5" fill="#ffffff"/>
+<circle cx="140" cy="260" r="4"/><circle cx="140" cy="260" r="1.5" fill="#ffffff"/>
+<circle cx="230" cy="260" r="4"/><circle cx="230" cy="260" r="1.5" fill="#ffffff"/>
+<circle cx="185" cy="140" r="4"/><circle cx="185" cy="140" r="1.5" fill="#ffffff"/>
+</g>
+<text font-family="Noto Sans CJK SC" x="190" y="380" text-anchor="middle" font-size="14" fill="#6b7280">外部 B 指向读者,且在增大 (dΦ_B/dt &gt; 0)</text>
+
+<!-- arrow marker defs -->
+<defs>
+<marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/>
+</marker>
+<marker id="arrowRed" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+<path d="M0,0 L6,3 L0,6 Z" fill="#dc2626"/>
+</marker>
+</defs>
+
+<!-- divider -->
+<line x1="380" y1="20" x2="380" y2="400" stroke="#e5e7eb" stroke-width="2"/>
+
+<!-- Right panel: result -->
+<text font-family="Noto Sans CJK SC" x="570" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">第二步:负号给出的结果(物理)</text>
+
+<circle cx="570" cy="210" r="120" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+<!-- actual induced current clockwise (red) -->
+<path d="M 570 90 A 120 120 0 0 1 689 190" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#arrowRed)"/>
+<path d="M 689 230 A 120 120 0 0 1 610 328" fill="none" stroke="#dc2626" stroke-width="4" marker-end="url(#arrowRed)"/>
+<text font-family="Noto Sans CJK SC" x="590" y="170" font-size="14" fill="#dc2626" font-weight="600">实际感应电流(顺时针)</text>
+
+<!-- induced B into page, X symbol -->
+<g stroke="#1a1a1a" stroke-width="2">
+<line x1="565" y1="205" x2="575" y2="215"/>
+<line x1="575" y1="205" x2="565" y2="215"/>
+</g>
+<circle cx="570" cy="210" r="10" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+<text font-family="Noto Sans CJK SC" x="585" y="205" font-size="14" fill="#1a1a1a">感应 B(⊗ 指向纸内)</text>
+
+<text font-family="Noto Sans CJK SC" x="570" y="365" text-anchor="middle" font-size="13" fill="#1a1a1a">感应 B 反抗外部 B 增大</text>
+<text font-family="Noto Sans CJK SC" x="570" y="385" text-anchor="middle" font-size="14" fill="#6b7280" font-weight="600">= 楞次定律:感应电流方向反抗磁通变化</text>
+
+</svg>

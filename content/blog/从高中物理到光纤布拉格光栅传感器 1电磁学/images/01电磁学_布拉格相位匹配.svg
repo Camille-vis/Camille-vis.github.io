@@ -1,0 +1,94 @@
+<svg viewBox="0 0 760 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>布拉格条件:反射波是否相长干涉</title>
+<desc>光纤纤芯折射率沿z周期性微小起伏,每个起伏位置都反弹一点点光。上图周期不满足布拉格条件时,不同位置反弹回来的光相位互相错开,叠加后大部分抵消。下图周期满足布拉格条件Λ等于λ除以2n0时,反弹光相位处处对齐,叠加后相长干涉形成显著反射。</desc>
+<rect x="0" y="0" width="760" height="460" fill="#ffffff"/>
+
+<!-- ============ TOP PANEL: mismatched period ============ -->
+<text font-family="Noto Sans CJK SC" x="380" y="28" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">Λ ≠ λ/(2n0):反弹光相位错开 → 相消干涉</text>
+
+<!-- fiber core with index modulation -->
+<rect x="60" y="60" width="500" height="40" fill="#e5e7eb"/>
+<g fill="#2563eb" opacity="0.5">
+<rect x="60" y="60" width="18" height="40"/>
+<rect x="118" y="60" width="18" height="40"/>
+<rect x="176" y="60" width="18" height="40"/>
+<rect x="234" y="60" width="18" height="40"/>
+<rect x="292" y="60" width="18" height="40"/>
+<rect x="350" y="60" width="18" height="40"/>
+<rect x="408" y="60" width="18" height="40"/>
+<rect x="466" y="60" width="18" height="40"/>
+<rect x="524" y="60" width="18" height="40"/>
+</g>
+<text font-family="Noto Sans CJK SC" x="310" y="115" text-anchor="middle" font-size="12" fill="#6b7280">纤芯 n(z) = n0 + δn·cos(2πz/Λ),蓝色条纹 = 折射率略高的位置</text>
+
+<!-- incoming wave -->
+<path d="M 30 80 L 55 80" stroke="#1a1a1a" stroke-width="3" marker-end="url(#arrIn1)"/>
+<text font-family="Noto Sans CJK SC" x="20" y="65" font-size="12" fill="#1a1a1a">入射波 →</text>
+
+<!-- reflected wavelets with misaligned phase (offset sine bumps) -->
+<g stroke="#dc2626" stroke-width="2" fill="none">
+<path d="M 69 130 q 8 -14 16 0" />
+<path d="M 127 130 q 8 10 16 0" />
+<path d="M 185 130 q 8 -6 16 0" />
+<path d="M 243 130 q 8 14 16 0" />
+<path d="M 301 130 q 8 -12 16 0" />
+<path d="M 359 130 q 8 4 16 0" />
+<path d="M 417 130 q 8 -14 16 0" />
+<path d="M 475 130 q 8 10 16 0" />
+<path d="M 533 130 q 8 -6 16 0" />
+</g>
+<text font-family="Noto Sans CJK SC" x="310" y="160" text-anchor="middle" font-size="12" fill="#dc2626">每个条纹反弹的小波,相位(小波峰位置)各不相同</text>
+
+<!-- sum: mostly cancels -->
+<path d="M 620 90 q 10 -6 20 0 q 10 6 20 0 q 10 -3 20 0 q 10 5 20 0" stroke="#6b7280" stroke-width="2.5" fill="none"/>
+<text font-family="Noto Sans CJK SC" x="700" y="115" text-anchor="middle" font-size="12" fill="#6b7280">叠加≈0</text>
+
+<!-- ============ divider ============ -->
+<line x1="20" y1="200" x2="740" y2="200" stroke="#e5e7eb" stroke-width="2"/>
+
+<!-- ============ BOTTOM PANEL: matched period ============ -->
+<text font-family="Noto Sans CJK SC" x="380" y="230" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">Λ = λ/(2n0)(布拉格条件):反弹光相位对齐 → 相长干涉</text>
+
+<rect x="60" y="260" width="500" height="40" fill="#e5e7eb"/>
+<g fill="#2563eb" opacity="0.5">
+<rect x="60" y="260" width="18" height="40"/>
+<rect x="118" y="260" width="18" height="40"/>
+<rect x="176" y="260" width="18" height="40"/>
+<rect x="234" y="260" width="18" height="40"/>
+<rect x="292" y="260" width="18" height="40"/>
+<rect x="350" y="260" width="18" height="40"/>
+<rect x="408" y="260" width="18" height="40"/>
+<rect x="466" y="260" width="18" height="40"/>
+<rect x="524" y="260" width="18" height="40"/>
+</g>
+<text font-family="Noto Sans CJK SC" x="310" y="315" text-anchor="middle" font-size="12" fill="#6b7280">周期 Λ 恰好等于 λ/(2n0)</text>
+
+<path d="M 30 280 L 55 280" stroke="#1a1a1a" stroke-width="3" marker-end="url(#arrIn2)"/>
+<text font-family="Noto Sans CJK SC" x="20" y="265" font-size="12" fill="#1a1a1a">入射波 →</text>
+
+<!-- reflected wavelets aligned phase -->
+<g stroke="#dc2626" stroke-width="2" fill="none">
+<path d="M 69 330 q 8 -14 16 0" />
+<path d="M 127 330 q 8 -14 16 0" />
+<path d="M 185 330 q 8 -14 16 0" />
+<path d="M 243 330 q 8 -14 16 0" />
+<path d="M 301 330 q 8 -14 16 0" />
+<path d="M 359 330 q 8 -14 16 0" />
+<path d="M 417 330 q 8 -14 16 0" />
+<path d="M 475 330 q 8 -14 16 0" />
+<path d="M 533 330 q 8 -14 16 0" />
+</g>
+<text font-family="Noto Sans CJK SC" x="310" y="360" text-anchor="middle" font-size="12" fill="#dc2626">每个条纹反弹的小波,相位完全同步(波峰对波峰)</text>
+
+<!-- sum: large amplitude -->
+<path d="M 610 300 q 15 -35 30 0 q 15 35 30 0 q 15 -35 30 0 q 15 35 30 0" stroke="#059669" stroke-width="3" fill="none"/>
+<text font-family="Noto Sans CJK SC" x="700" y="330" text-anchor="middle" font-size="12" fill="#059669" font-weight="600">叠加显著</text>
+
+<text font-family="Noto Sans CJK SC" x="380" y="420" text-anchor="middle" font-size="14" fill="#1a1a1a" font-weight="600">λ_B = 2n0Λ:只有这个波长的光被高效反射,这就是 FBG 的选择性</text>
+
+<defs>
+<marker id="arrIn1" markerWidth="9" markerHeight="9" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#1a1a1a"/></marker>
+<marker id="arrIn2" markerWidth="9" markerHeight="9" refX="5" refY="2.5" orient="auto"><path d="M0,0 L5,2.5 L0,5 Z" fill="#1a1a1a"/></marker>
+</defs>
+
+</svg>
