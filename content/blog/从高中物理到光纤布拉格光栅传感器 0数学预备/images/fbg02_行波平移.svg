@@ -1,0 +1,27 @@
+<svg viewBox="0 0 760 330" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>行波解 f(x-vt)：形状不变、整体平移</title>
+<desc>同一个波形在 t=0 和 t=Δt 两个时刻的位置。波形的形状完全没有变化，只是整体沿 x 轴向右移动了 v 乘以 Δt 的距离。这就是波动方程通解 f(x-vt) 的全部含义。</desc>
+<rect x="0" y="0" width="760" height="330" fill="#ffffff"/>
+<defs>
+<marker id="ax" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#1a1a1a"/></marker>
+<marker id="av" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#059669"/></marker>
+</defs>
+
+<text font-family="Noto Sans CJK SC" x="380" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">波动方程的通解：形状不变，整体平移</text>
+
+<line x1="70" y1="250" x2="712" y2="250" stroke="#1a1a1a" stroke-width="1.8" marker-end="url(#ax)"/>
+<text font-family="Noto Sans CJK SC" x="722" y="256" font-size="14" fill="#1a1a1a">x</text>
+
+<path d="M 130 250 C 168 250 174 130 200 130 C 226 130 232 250 270 250" fill="none" stroke="#2563eb" stroke-width="2.6"/>
+<text font-family="Noto Sans CJK SC" x="200" y="278" text-anchor="middle" font-size="13.5" fill="#2563eb">t = 0</text>
+
+<path d="M 400 250 C 438 250 444 130 470 130 C 496 130 502 250 540 250" fill="none" stroke="#dc2626" stroke-width="2.6"/>
+<text font-family="Noto Sans CJK SC" x="470" y="278" text-anchor="middle" font-size="13.5" fill="#dc2626">t = Δt</text>
+
+<line x1="200" y1="130" x2="200" y2="100" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="470" y1="130" x2="470" y2="100" stroke="#9ca3af" stroke-width="1.2" stroke-dasharray="4 3"/>
+<line x1="200" y1="108" x2="464" y2="108" stroke="#059669" stroke-width="2" marker-end="url(#av)"/>
+<text font-family="Noto Sans CJK SC" x="335" y="98" text-anchor="middle" font-size="14" fill="#059669">移动距离 = v · Δt</text>
+
+<text font-family="Noto Sans CJK SC" x="380" y="308" text-anchor="middle" font-size="13" fill="#1a1a1a">波峰、波谷、每一处的高度都原样保留，只是自变量从 x 换成了 x − vt</text>
+</svg>

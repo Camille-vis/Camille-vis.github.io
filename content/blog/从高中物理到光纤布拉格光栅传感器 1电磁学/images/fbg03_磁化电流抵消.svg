@@ -1,0 +1,35 @@
+<svg viewBox="0 0 760 372" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>磁化电流只在磁化强度变化的地方漏出来</title>
+<desc>把磁化想成介质里密铺的无数个原子尺度电流环。左图磁化均匀，相邻两个环共享的那条内部边上，电流一个向上一个向下、大小相同，精确抵消。右图磁化沿空间变化，右边的环比左边的强，共享边上一强一弱抵不平，漏出一股净电流，这就是旋度 ∇×M。</desc>
+<rect x="0" y="0" width="760" height="372" fill="#ffffff"/>
+<defs>
+<marker id="mb" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="7" refY="3.6" orient="auto"><path d="M0,0 L8,3.6 L0,7.2 Z" fill="#2563eb"/></marker>
+<marker id="ml" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="6.5" refY="3.2" orient="auto"><path d="M0,0 L7,3.2 L0,6.4 Z" fill="#93c5fd"/></marker>
+<marker id="mr" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="12" refX="7" refY="3.6" orient="auto"><path d="M0,0 L8,3.6 L0,7.2 Z" fill="#dc2626"/></marker>
+<marker id="mg" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="15" refX="9" refY="4.5" orient="auto"><path d="M0,0 L10,4.5 L0,9 Z" fill="#059669"/></marker>
+</defs>
+<text font-family="Noto Sans CJK SC" x="190" y="36" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">磁化均匀：共享边上精确抵消</text>
+<line x1="186" y1="112" x2="94" y2="112" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/><line x1="90" y1="112" x2="90" y2="204" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/><line x1="90" y1="208" x2="182" y2="208" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/>
+<line x1="282" y1="208" x2="282" y2="116" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/><line x1="282" y1="112" x2="190" y2="112" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/><line x1="186" y1="208" x2="278" y2="208" stroke="#2563eb" stroke-width="2.4" marker-end="url(#mb)"/>
+<line x1="179" y1="208" x2="179" y2="116" stroke="#dc2626" stroke-width="2.8" marker-end="url(#mr)"/>
+<line x1="193" y1="112" x2="193" y2="204" stroke="#dc2626" stroke-width="2.8" marker-end="url(#mr)"/>
+<text font-family="Noto Sans CJK SC" x="190" y="244" text-anchor="middle" font-size="13" fill="#dc2626">共享边上：一个向上、一个向下，等大反向</text>
+<text font-family="Noto Sans CJK SC" x="190" y="268" text-anchor="middle" font-size="15" font-weight="600" fill="#dc2626">净电流 ＝ 0</text>
+<text font-family="Noto Sans CJK SC" x="190" y="294" text-anchor="middle" font-size="12.5" fill="#6b7280">介质内部处处如此，只在最外圈剩下环流</text>
+
+<line x1="380" y1="24" x2="380" y2="348" stroke="#e5e7eb" stroke-width="2"/>
+
+<text font-family="Noto Sans CJK SC" x="570" y="36" text-anchor="middle" font-size="16" font-weight="600" fill="#1a1a1a">磁化沿空间变化：抵不平</text>
+<line x1="558" y1="112" x2="466" y2="112" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#ml)"/><line x1="462" y1="112" x2="462" y2="204" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#ml)"/><line x1="462" y1="208" x2="554" y2="208" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#ml)"/>
+<line x1="654" y1="208" x2="654" y2="116" stroke="#2563eb" stroke-width="3.4" marker-end="url(#mb)"/><line x1="654" y1="112" x2="562" y2="112" stroke="#2563eb" stroke-width="3.4" marker-end="url(#mb)"/><line x1="558" y1="208" x2="650" y2="208" stroke="#2563eb" stroke-width="3.4" marker-end="url(#mb)"/>
+<text font-family="Noto Sans CJK SC" x="510" y="100" text-anchor="middle" font-size="12.5" fill="#7aa7e8">M 小（环弱）</text>
+<text font-family="Noto Sans CJK SC" x="606" y="100" text-anchor="middle" font-size="12.5" font-weight="600" fill="#2563eb">M 大（环强）</text>
+<line x1="551" y1="208" x2="551" y2="164" stroke="#93c5fd" stroke-width="1.8" marker-end="url(#ml)"/>
+<line x1="565" y1="112" x2="565" y2="204" stroke="#2563eb" stroke-width="3.4" marker-end="url(#mb)"/>
+<line x1="592" y1="130" x2="592" y2="202" stroke="#059669" stroke-width="4" marker-end="url(#mg)"/>
+<text font-family="Noto Sans CJK SC" x="604" y="174" font-size="13.5" font-weight="600" fill="#059669">漏出净电流</text>
+<text font-family="Noto Sans CJK SC" x="570" y="244" text-anchor="middle" font-size="13" fill="#1a1a1a">弱的向上、强的向下，抵不平，剩下一截</text>
+<text font-family="Noto Sans CJK SC" x="570" y="268" text-anchor="middle" font-size="15" font-weight="600" fill="#059669">这一截就是 ∇×M</text>
+
+<text font-family="Noto Sans CJK SC" x="380" y="356" text-anchor="middle" font-size="13" fill="#1a1a1a">跟旋度是同一回事：均匀的地方测不出净环流，只有空间不均匀才漏得出来</text>
+</svg>

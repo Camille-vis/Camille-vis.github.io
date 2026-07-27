@@ -59,3 +59,132 @@ h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
 .section-head { display: flex; align-items: baseline; justify-content: space-between; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
 .section-head h2 { margin: 0; }
 .tag-list { display: flex; gap: 10px; flex-wrap: wrap; font-size: 12px; }
+.content details {
+  border: 1px solid #e6ddc9;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 1.2rem 0;
+  background: #fdfaf2;
+}
+.content summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #bc5e3c;
+  list-style: none;
+}
+.content summary::-webkit-details-marker { display: none; }
+.content summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+  transition: transform 0.15s ease;
+}
+.content details[open] summary::before { transform: rotate(90deg); }
+.content details[open] summary { margin-bottom: 8px; }
+
+/* ---- 正文标题层级 ----
+   注意:全局 h2 规则(17px)是首页板块标题用的。正文里的 h2/h3/h4 必须单独定义,
+   否则 h3 及以下会落到浏览器默认值,出现"h3 比 h2 还大"的倒置。 */
+.content h2 {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 2.4rem 0 12px;
+  padding-top: 14px;
+  border-top: 1px solid #e6ddc9;
+  line-height: 1.4;
+}
+.content h3 {
+  font-size: 16.5px;
+  font-weight: 700;
+  margin: 1.8rem 0 8px;
+  line-height: 1.45;
+}
+.content h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #a8532f;
+  margin: 1.3rem 0 6px;
+}
+.content h5, .content h6 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #6b5a4a;
+  margin: 1.1rem 0 6px;
+}
+
+/* ---- 表格 ---- */
+.content table {
+  border-collapse: collapse;
+  margin: 1.2rem 0;
+  font-size: 14px;
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.content th, .content td {
+  border: 1px solid #e0d6c0;
+  padding: 7px 10px;
+  text-align: left;
+  vertical-align: top;
+  line-height: 1.55;
+}
+.content thead th { background: #efe7d6; font-weight: 600; }
+.content tbody tr:nth-child(even) { background: #fbf8f0; }
+
+/* ---- 长公式在窄屏上横向滚动,不再溢出裁切 ---- */
+.content .katex-display {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 4px 2px 6px;
+}
+
+/* ---- 其他正文元素 ---- */
+.content hr { border: none; border-top: 1px solid #e6ddc9; margin: 2rem 0; }
+.content blockquote {
+  margin: 1.2rem 0;
+  padding: 2px 0 2px 14px;
+  border-left: 3px solid #d8ccb4;
+  color: #5d5245;
+}
+.content blockquote p { margin: 0.4em 0; }
+.content code {
+  background: #efe7d6;
+  padding: 1px 5px;
+  border-radius: 4px;
+  font-size: 13px;
+}
+.content pre { overflow-x: auto; }
+.content pre code { background: none; padding: 0; }
+.content li { margin: 4px 0; }
+
+/* ---- 文章目录(front matter 里 toc: true 才出现) ---- */
+.toc {
+  border: 1px solid #e6ddc9;
+  background: #fdfaf2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 1.8rem;
+  font-size: 13.5px;
+}
+.toc summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #bc5e3c;
+  list-style: none;
+}
+.toc summary::-webkit-details-marker { display: none; }
+.toc summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+  transition: transform 0.15s ease;
+}
+.toc[open] summary::before { transform: rotate(90deg); }
+.toc[open] summary { margin-bottom: 6px; }
+.toc ul { margin: 4px 0; padding-left: 1.3em; }
+.toc > nav > ul { padding-left: 1em; }
+.toc li { margin: 3px 0; }
+.toc a { color: #6b5f4d; text-decoration: none; }
+.toc a:hover { color: #bc5e3c; text-decoration: underline; }

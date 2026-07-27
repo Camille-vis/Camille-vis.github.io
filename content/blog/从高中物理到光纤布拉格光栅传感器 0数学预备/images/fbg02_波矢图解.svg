@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 420" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>波矢的方向与大小</title>
+<desc>左图展示一般情况下波矢k的定义:一组等间距平行波前,相邻波前间距是一个波长,k是垂直于波前、指向传播方向的箭头,大小等于2π除以波长。右图展示光纤问题的特殊情况:因为只有沿光纤轴向z这一个方向,k退化成一个带正负号的标量,正号表示向+z传播,负号表示向-z传播。</desc>
+<rect x="0" y="0" width="760" height="420" fill="#ffffff"/>
+
+<text font-family="Noto Sans CJK SC" x="190" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">一般情况:波矢 k 的定义</text>
+
+<g stroke="#9ca3af" stroke-width="2">
+<line x1="70" y1="80" x2="70" y2="320"/>
+<line x1="120" y1="80" x2="120" y2="320"/>
+<line x1="170" y1="80" x2="170" y2="320"/>
+<line x1="220" y1="80" x2="220" y2="320"/>
+<line x1="270" y1="80" x2="270" y2="320"/>
+<line x1="320" y1="80" x2="320" y2="320"/>
+</g>
+<text font-family="Noto Sans CJK SC" x="195" y="70" text-anchor="middle" font-size="12" fill="#6b7280">一组等相位的波前(间距 = 一个波长 λ)</text>
+
+<path d="M 120 360 L 170 360" stroke="#1a1a1a" stroke-width="1.5"/>
+<path d="M 120 355 L 120 365" stroke="#1a1a1a" stroke-width="1.5"/>
+<path d="M 170 355 L 170 365" stroke="#1a1a1a" stroke-width="1.5"/>
+<text font-family="Noto Sans CJK SC" x="145" y="378" text-anchor="middle" font-size="12" fill="#1a1a1a">λ</text>
+
+<path d="M 195 200 L 340 200" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arrK)"/>
+<text font-family="Noto Sans CJK SC" x="270" y="185" text-anchor="middle" font-size="15" fill="#dc2626" font-weight="600">k</text>
+
+<text font-family="Noto Sans CJK SC" x="195" y="230" font-size="12" fill="#dc2626">方向 = 垂直于波前,指向传播方向</text>
+<text font-family="Noto Sans CJK SC" x="60" y="255" font-size="13" fill="#1a1a1a" font-weight="600">大小:|k| = 2π/λ</text>
+<text font-family="Noto Sans CJK SC" x="60" y="278" font-size="12" fill="#6b7280">(每前进 2π/k 这么长的距离,相位增加 2π,正好绕一圈)</text>
+
+<line x1="380" y1="20" x2="380" y2="400" stroke="#e5e7eb" stroke-width="2"/>
+
+<text font-family="Noto Sans CJK SC" x="570" y="32" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">光纤问题:k 退化成带符号的标量</text>
+
+<line x1="440" y1="200" x2="700" y2="200" stroke="#1a1a1a" stroke-width="2"/>
+<text font-family="Noto Sans CJK SC" x="700" y="195" font-size="13" fill="#1a1a1a" text-anchor="end">光纤轴向 z</text>
+
+<path d="M 480 160 L 560 160" stroke="#dc2626" stroke-width="3.5" marker-end="url(#arrK2)"/>
+<text font-family="Noto Sans CJK SC" x="520" y="145" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="600">k &gt; 0,沿 +z 传播</text>
+<text font-family="Noto Sans CJK SC" x="520" y="185" text-anchor="middle" font-size="11" fill="#6b7280">e^{i(kz−ωt)}</text>
+
+<path d="M 620 260 L 540 260" stroke="#2563eb" stroke-width="3.5" marker-end="url(#arrK3)"/>
+<text font-family="Noto Sans CJK SC" x="580" y="245" text-anchor="middle" font-size="13" fill="#2563eb" font-weight="600">用 −k,沿 −z 传播</text>
+<text font-family="Noto Sans CJK SC" x="580" y="285" text-anchor="middle" font-size="11" fill="#6b7280">e^{i(−kz−ωt)}</text>
+
+<text font-family="Noto Sans CJK SC" x="570" y="340" text-anchor="middle" font-size="12" fill="#6b7280">只有一个方向可选(沿轴),矢量退化成标量</text>
+<text font-family="Noto Sans CJK SC" x="570" y="362" text-anchor="middle" font-size="12" fill="#6b7280">方向信息完全由正负号承载,不需要写成三分量矢量</text>
+
+<defs>
+<marker id="arrK" markerWidth="11" markerHeight="11" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#dc2626"/></marker>
+<marker id="arrK2" markerWidth="11" markerHeight="11" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#dc2626"/></marker>
+<marker id="arrK3" markerWidth="11" markerHeight="11" refX="6" refY="3" orient="auto"><path d="M0,0 L7,3.5 L0,7 Z" fill="#2563eb"/></marker>
+</defs>
+</svg>

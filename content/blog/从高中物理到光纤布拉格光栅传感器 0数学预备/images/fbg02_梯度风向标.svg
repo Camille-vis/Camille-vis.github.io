@@ -1,0 +1,79 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>梯度:温度场里每一点插一根风向标</title>
+<desc>一个三维温度场的切面,右边有热源、左边有冷源。每一点画一根箭头,方向指向该点温度上升最快的方向,长度代表上升的速率。这就是梯度场:一个标量场输入,每一点输出一个矢量。不要想成山坡的坡度,那是二维图像,三维里想不出来。</desc>
+<defs>
+<radialGradient id="gh" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#fca5a5" stop-opacity="0.55"/><stop offset="100%" stop-color="#fca5a5" stop-opacity="0"/></radialGradient>
+<radialGradient id="gc" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#93c5fd" stop-opacity="0.55"/><stop offset="100%" stop-color="#93c5fd" stop-opacity="0"/></radialGradient>
+<marker id="ag" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="6.6" refY="3.4" orient="auto"><path d="M0,0 L7,3.4 L0,6.8 Z" fill="#1f2937"/></marker>
+</defs>
+<rect x="0" y="0" width="760" height="400" fill="#ffffff"/>
+<circle cx="545" cy="205" r="165" fill="url(#gh)"/>
+<circle cx="215" cy="205" r="165" fill="url(#gc)"/>
+<text font-family="Noto Sans CJK SC" x="380" y="36" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">梯度：每一点插一根风向标，指向本地升温最快的方向</text>
+<g stroke="#1f2937" stroke-width="1.9" marker-end="url(#ag)">
+<line x1="90.0" y1="105.0" x2="69.8" y2="88.8" opacity="0.73"/>
+<line x1="90.0" y1="155.0" x2="63.7" y2="144.5" opacity="0.80"/>
+<line x1="90.0" y1="205.0" x2="60.9" y2="205.0" opacity="0.82"/>
+<line x1="90.0" y1="255.0" x2="63.7" y2="265.5" opacity="0.80"/>
+<line x1="90.0" y1="305.0" x2="69.8" y2="321.2" opacity="0.73"/>
+<line x1="145.0" y1="105.0" x2="128.2" y2="81.0" opacity="0.82"/>
+<line x1="145.0" y1="155.0" x2="120.3" y2="137.4" opacity="0.85"/>
+<line x1="145.0" y1="205.0" x2="115.3" y2="205.0" opacity="0.83"/>
+<line x1="145.0" y1="255.0" x2="120.3" y2="272.6" opacity="0.85"/>
+<line x1="145.0" y1="305.0" x2="128.2" y2="329.0" opacity="0.82"/>
+<line x1="200.0" y1="105.0" x2="195.6" y2="75.1" opacity="0.85"/>
+<line x1="200.0" y1="155.0" x2="192.1" y2="128.1" opacity="0.79"/>
+<line x1="200.0" y1="255.0" x2="192.1" y2="281.9" opacity="0.79"/>
+<line x1="200.0" y1="305.0" x2="195.6" y2="334.9" opacity="0.85"/>
+<line x1="255.0" y1="105.0" x2="266.9" y2="77.4" opacity="0.84"/>
+<line x1="255.0" y1="155.0" x2="274.2" y2="132.7" opacity="0.83"/>
+<line x1="255.0" y1="205.0" x2="281.8" y2="205.0" opacity="0.75"/>
+<line x1="255.0" y1="255.0" x2="274.2" y2="277.3" opacity="0.83"/>
+<line x1="255.0" y1="305.0" x2="266.9" y2="332.6" opacity="0.84"/>
+<line x1="310.0" y1="105.0" x2="332.2" y2="86.9" opacity="0.80"/>
+<line x1="310.0" y1="155.0" x2="339.2" y2="143.1" opacity="0.88"/>
+<line x1="310.0" y1="205.0" x2="342.4" y2="205.0" opacity="0.91"/>
+<line x1="310.0" y1="255.0" x2="339.2" y2="266.9" opacity="0.88"/>
+<line x1="310.0" y1="305.0" x2="332.2" y2="323.1" opacity="0.80"/>
+<line x1="365.0" y1="105.0" x2="391.7" y2="101.6" opacity="0.76"/>
+<line x1="365.0" y1="155.0" x2="396.3" y2="153.0" opacity="0.88"/>
+<line x1="365.0" y1="205.0" x2="398.2" y2="205.0" opacity="0.93"/>
+<line x1="365.0" y1="255.0" x2="396.3" y2="257.0" opacity="0.88"/>
+<line x1="365.0" y1="305.0" x2="391.7" y2="308.4" opacity="0.76"/>
+<line x1="420.0" y1="105.0" x2="445.4" y2="117.9" opacity="0.80"/>
+<line x1="420.0" y1="155.0" x2="451.5" y2="163.0" opacity="0.91"/>
+<line x1="420.0" y1="205.0" x2="454.0" y2="205.0" opacity="0.95"/>
+<line x1="420.0" y1="255.0" x2="451.5" y2="247.0" opacity="0.91"/>
+<line x1="420.0" y1="305.0" x2="445.4" y2="292.1" opacity="0.80"/>
+<line x1="475.0" y1="105.0" x2="494.1" y2="129.7" opacity="0.87"/>
+<line x1="475.0" y1="155.0" x2="502.4" y2="172.8" opacity="0.92"/>
+<line x1="475.0" y1="205.0" x2="507.4" y2="205.0" opacity="0.91"/>
+<line x1="475.0" y1="255.0" x2="502.4" y2="237.2" opacity="0.92"/>
+<line x1="475.0" y1="305.0" x2="494.1" y2="280.3" opacity="0.87"/>
+<line x1="530.0" y1="105.0" x2="535.0" y2="136.7" opacity="0.90"/>
+<line x1="530.0" y1="155.0" x2="538.9" y2="183.3" opacity="0.83"/>
+<line x1="530.0" y1="255.0" x2="538.9" y2="226.7" opacity="0.83"/>
+<line x1="530.0" y1="305.0" x2="535.0" y2="273.3" opacity="0.90"/>
+<line x1="585.0" y1="105.0" x2="573.2" y2="134.6" opacity="0.89"/>
+<line x1="585.0" y1="155.0" x2="565.7" y2="179.2" opacity="0.87"/>
+<line x1="585.0" y1="205.0" x2="557.4" y2="205.0" opacity="0.78"/>
+<line x1="585.0" y1="255.0" x2="565.7" y2="230.8" opacity="0.87"/>
+<line x1="585.0" y1="305.0" x2="573.2" y2="275.4" opacity="0.89"/>
+<line x1="640.0" y1="105.0" x2="619.5" y2="126.6" opacity="0.83"/>
+<line x1="640.0" y1="155.0" x2="611.8" y2="169.9" opacity="0.89"/>
+<line x1="640.0" y1="205.0" x2="607.8" y2="205.0" opacity="0.90"/>
+<line x1="640.0" y1="255.0" x2="611.8" y2="240.1" opacity="0.89"/>
+<line x1="640.0" y1="305.0" x2="619.5" y2="283.4" opacity="0.83"/>
+<line x1="695.0" y1="105.0" x2="674.3" y2="118.8" opacity="0.70"/>
+<line x1="695.0" y1="155.0" x2="668.8" y2="163.7" opacity="0.77"/>
+<line x1="695.0" y1="205.0" x2="666.5" y2="205.0" opacity="0.80"/>
+<line x1="695.0" y1="255.0" x2="668.8" y2="246.3" opacity="0.77"/>
+<line x1="695.0" y1="305.0" x2="674.3" y2="291.2" opacity="0.70"/>
+</g>
+<circle cx="215" cy="205" r="9" fill="#2563eb"/>
+<text font-family="Noto Sans CJK SC" x="215" y="182" text-anchor="middle" font-size="13.5" font-weight="600" fill="#2563eb">冷</text>
+<circle cx="545" cy="205" r="9" fill="#dc2626"/>
+<text font-family="Noto Sans CJK SC" x="545" y="182" text-anchor="middle" font-size="13.5" font-weight="600" fill="#dc2626">热</text>
+<text font-family="Noto Sans CJK SC" x="380" y="368" text-anchor="middle" font-size="13" fill="#1a1a1a">箭头方向 ＝ 该点温度上升最快的方向，箭头长度 ＝ 上升速率</text>
+<text font-family="Noto Sans CJK SC" x="380" y="388" text-anchor="middle" font-size="12" fill="#6b7280">标量场（温度）进，矢量场（梯度）出——不必想象成山坡，三维里想象不出来</text>
+</svg>

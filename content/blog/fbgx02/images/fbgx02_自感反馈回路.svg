@@ -1,0 +1,53 @@
+<svg viewBox="0 0 780 460" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>自感:安培定律与法拉第定律接力形成的反馈回路</title>
+<desc>一个线圈通着随时间变化的电流I(t)。第一步用安培定律,此刻的电流直接产生此刻的磁场B(t),这一步没有时间导数,是瞬时关系。第二步,因为B(t)在变化,用法拉第定律,变化的磁场在同一个线圈里感应出一个反抗电流变化的电动势,这个电动势试图阻止电流改变,这就是自感。两步接力才构成了电流对自身的反馈,安培定律单独并不包含这个反馈。</desc>
+<rect x="0" y="0" width="780" height="460" fill="#ffffff"/>
+
+<text font-family="Noto Sans CJK SC" x="390" y="34" text-anchor="middle" font-size="18" font-weight="600" fill="#1a1a1a">自感:安培定律 + 法拉第定律接力,才拼出反馈回路</text>
+
+<text font-family="Noto Sans CJK SC" x="390" y="72" text-anchor="middle" font-size="13" fill="#6b7280">线圈,电流 I(t) 随时间变化(比如交流)</text>
+
+<!-- coil -->
+<ellipse cx="390" cy="220" rx="150" ry="65" fill="none" stroke="#1a1a1a" stroke-width="3"/>
+
+<!-- current arrows on coil -->
+<path d="M 260 195 A 150 65 0 0 1 390 155" fill="none" stroke="#2563eb" stroke-width="3" marker-end="url(#arrI)"/>
+<text font-family="Noto Sans CJK SC" x="270" y="145" font-size="13" fill="#2563eb" font-weight="600">I(t)</text>
+
+<!-- B field dot in center -->
+<circle cx="390" cy="220" r="6" fill="#1a1a1a"/>
+<circle cx="390" cy="220" r="2.5" fill="#ffffff"/>
+<text font-family="Noto Sans CJK SC" x="390" y="250" text-anchor="middle" font-size="13" fill="#1a1a1a">B(t)(线圈内部磁场)</text>
+
+<!-- step boxes -->
+<rect x="30" y="330" width="220" height="90" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+<text font-family="Noto Sans CJK SC" x="140" y="360" text-anchor="middle" font-size="14" fill="#1a1a1a" font-weight="600">第一步:安培定律</text>
+<text font-family="Noto Sans CJK SC" x="140" y="382" text-anchor="middle" font-size="12" fill="#1a1a1a">瞬时关系,无时间导数</text>
+<text font-family="Noto Sans CJK SC" x="140" y="402" text-anchor="middle" font-size="13" fill="#2563eb" font-weight="600">I(t) → B(t)</text>
+
+<path d="M 260 375 L 330 375" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrStep)"/>
+
+<rect x="330" y="330" width="220" height="90" rx="8" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+<text font-family="Noto Sans CJK SC" x="440" y="360" text-anchor="middle" font-size="14" fill="#1a1a1a" font-weight="600">第二步:法拉第定律</text>
+<text font-family="Noto Sans CJK SC" x="440" y="382" text-anchor="middle" font-size="12" fill="#1a1a1a">B 在变 → 感应电动势</text>
+<text font-family="Noto Sans CJK SC" x="440" y="402" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="600">dB/dt → ε = −L·dI/dt</text>
+
+<path d="M 550 375 L 620 375" stroke="#1a1a1a" stroke-width="2.5" marker-end="url(#arrStep)"/>
+
+<rect x="620" y="330" width="140" height="90" rx="8" fill="#dcfce7" stroke="#059669" stroke-width="2"/>
+<text font-family="Noto Sans CJK SC" x="690" y="360" text-anchor="middle" font-size="14" fill="#1a1a1a" font-weight="600">反抗 I(t) 的变化</text>
+<text font-family="Noto Sans CJK SC" x="690" y="385" text-anchor="middle" font-size="12" fill="#059669" font-weight="600">= 楞次定律</text>
+<text font-family="Noto Sans CJK SC" x="690" y="405" text-anchor="middle" font-size="12" fill="#059669" font-weight="600">= 自感</text>
+
+<!-- feedback arrow back to coil -->
+<path d="M 700 330 C 700 290, 600 275, 500 255" fill="none" stroke="#059669" stroke-width="2.5" stroke-dasharray="6,4" marker-end="url(#arrFb)"/>
+<text font-family="Noto Sans CJK SC" x="640" y="300" text-anchor="middle" font-size="12" fill="#059669">这个感应电动势反过来作用在同一个线圈上</text>
+
+<text font-family="Noto Sans CJK SC" x="390" y="450" text-anchor="middle" font-size="13" fill="#6b7280">安培定律单独只有"I→B"这一步,不含时间导数;反馈是两条定律接力才拼出来的</text>
+
+<defs>
+<marker id="arrI" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#2563eb"/></marker>
+<marker id="arrStep" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#1a1a1a"/></marker>
+<marker id="arrFb" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#059669"/></marker>
+</defs>
+</svg>

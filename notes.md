@@ -39,6 +39,12 @@
 
 - **骨架未经过实际 `hugo build` 验证。** Claude 的沙盒环境网络策略挡掉了 github.com release 二进制下载和 Ubuntu 官方 hugo 包镜像（403/连接被拦截），无法在这里装 Hugo 跑一次真实编译。模板是按标准 Hugo 模板语法（`baseof`/`block` 继承模式、`.Site.RegularPages`、front matter 类型）手动核对写的，逻辑上应该没问题，但没有"跑起来看过"这层保证。**用户本机装好 Hugo 后第一件事应该是跑一次 `hugo server -D`，肉眼确认没有报错、页面结构对得上**，如果有模板报错再反馈回来改。
 
+## 决策记录（追加，折叠排版，2026-07-25）
+
+- **新增折叠内容支持**：用户反馈主线外的题外话内容太多，希望能折叠改善阅读体验。方案是原生 HTML `<details>`/`<summary>` 标签（`hugo.toml` 的 `unsafe = true` 已支持，不用加 shortcode 或第三方插件），配合 `static/css/style.css` 里新加的样式（圆角框、summary 加粗、箭头图标随展开/折叠转向）。
+- 用法写进了 `编辑指南.md`（"公式/图片/视频"那节新增"折叠内容"小节），演示放在 `content/blog/all-features-template.md`（"十三、折叠内容"）。
+- 关键坑：`<summary>` 和正文之间、`</details>` 前都要空一行，不然里面的 Markdown 语法不会被解析。
+
 ## 待办（对应 STATUS.md 任务列表）
 
 1. 用户提供真实内容：bio 文本、联系方式、教育背景、专利列表、GitHub 展示用户名。

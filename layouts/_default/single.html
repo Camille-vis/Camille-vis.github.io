@@ -3,6 +3,7 @@
 <a href="/" class="back">← Home</a>
 <h1>{{ .Title }}</h1>
 <p class="muted">{{ .Date.Format "2006-01-02" }}{{ if .Params.tags }} · {{ range $i, $t := .GetTerms "tags" }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}" class="tag-link">{{ $t.Title }}</a>{{ end }}{{ end }}</p>
+{{ if .Params.toc }}<details class="toc" open><summary>目录</summary>{{ .TableOfContents }}</details>{{ end }}
 <div class="content">{{ .Content }}</div>
 </div>
 {{ if .Params.math }}

@@ -1,0 +1,36 @@
+<svg viewBox="0 0 760 366" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>极化把一层束缚电荷「扫」过界面</title>
+<desc>介质被外场极化后，正电荷整体沿极化方向挪动了一小段位移 d。贴着面元 da 的那一层里，凡是落在以 d 为斜边的斜柱体内的正电荷，都被挤过了这片面元。斜柱体的体积等于 d 点乘外法线 n 再乘 da，所以挤出的电荷量正好是 P 点乘 n 乘 da。</desc>
+<rect x="0" y="0" width="760" height="366" fill="#ffffff"/>
+<defs>
+<marker id="an" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#1a1a1a"/></marker>
+<marker id="ap" markerUnits="userSpaceOnUse" markerWidth="14" markerHeight="14" refX="8.5" refY="4.2" orient="auto"><path d="M0,0 L9.5,4.2 L0,8.4 Z" fill="#2563eb"/></marker>
+<marker id="ad" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/></marker>
+</defs>
+<text font-family="Noto Sans CJK SC" x="380" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">极化把贴着界面的一薄层束缚电荷「扫」了出去</text>
+
+<line x1="470" y1="72" x2="470" y2="300" stroke="#1a1a1a" stroke-width="2.6"/>
+<text font-family="Noto Sans CJK SC" x="480" y="88" font-size="12.5" fill="#1a1a1a">闭合曲面的一小片面元 da（侧视成一条竖线）</text>
+
+<path d="M 470 128 L 470 258 L 388 286 L 388 156 Z" fill="#dbeafe" stroke="#2563eb" stroke-width="1.8" stroke-dasharray="5 3"/>
+<line x1="388" y1="286" x2="463" y2="260" stroke="#dc2626" stroke-width="2.8" marker-end="url(#ad)"/>
+<text font-family="Noto Sans CJK SC" x="420" y="278" font-size="15" font-weight="600" fill="#dc2626">d</text>
+
+<line x1="470" y1="192" x2="556" y2="192" stroke="#1a1a1a" stroke-width="2.2" marker-end="url(#an)"/>
+<text font-family="Noto Sans CJK SC" x="566" y="188" font-size="14" font-weight="600" fill="#1a1a1a">n</text>
+<text font-family="Noto Sans CJK SC" x="566" y="208" font-size="12" fill="#6b7280">外法线（单位矢量）</text>
+
+<line x1="120" y1="180" x2="240" y2="136" stroke="#2563eb" stroke-width="3.2" marker-end="url(#ap)"/>
+<text font-family="Noto Sans CJK SC" x="250" y="136" font-size="16" font-weight="600" fill="#2563eb">P</text>
+<text font-family="Noto Sans CJK SC" x="120" y="212" font-size="13" fill="#2563eb">极化强度 ＝ 单位体积的电偶极矩</text>
+<text font-family="Noto Sans CJK SC" x="120" y="236" font-size="12.5" fill="#6b7280">外场把介质里每一对正负电荷</text>
+<text font-family="Noto Sans CJK SC" x="120" y="256" font-size="12.5" fill="#6b7280">沿这个方向拉开了 d，整体仍然电中性</text>
+
+<text font-family="Noto Sans CJK SC" x="378" y="308" text-anchor="end" font-size="12.5" fill="#2563eb">蓝色斜柱体里的正电荷，</text>
+<text font-family="Noto Sans CJK SC" x="378" y="326" text-anchor="end" font-size="12.5" fill="#2563eb">全都被挤过了这片面元</text>
+
+<text font-family="Noto Sans CJK SC" x="500" y="248" font-size="13.5" fill="#1a1a1a">斜柱体体积 ＝ (d · n) da</text>
+<text font-family="Noto Sans CJK SC" x="500" y="272" font-size="13.5" fill="#1a1a1a">挤出电荷 ＝ nq (d · n) da ＝ P · n da</text>
+
+<text font-family="Noto Sans CJK SC" x="380" y="354" text-anchor="middle" font-size="13" fill="#1a1a1a">对整个闭合曲面积分，再用一次散度定理，就得到 ρ(束缚) ＝ −∇·P</text>
+</svg>

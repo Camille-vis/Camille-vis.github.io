@@ -8,6 +8,12 @@ title = "LI Chengping"
 [markup.goldmark.renderer]
   unsafe = true
 
+# 文章目录只收录 h2/h3(章、节),不收 h4 的小标题,否则长文目录会糊成一片
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+  ordered = false
+
 [markup.goldmark.extensions.passthrough]
   enable = true
   [markup.goldmark.extensions.passthrough.delimiters]

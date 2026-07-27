@@ -1,0 +1,53 @@
+<svg viewBox="0 0 760 400" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>散度与旋度的极限定义对比</title>
+<desc>左图：在一点周围套一个小闭合面，算穿过它的净流出量再除以体积，让体积趋于零，得到散度。右图：在一点周围套一个小闭合圈，算沿圈一周的环流再除以面积，让面积趋于零，得到旋度在圈轴方向的分量。两个定义结构完全一样，区别只是"穿过闭合面"和"绕闭合圈"。</desc>
+<rect x="0" y="0" width="760" height="400" fill="#ffffff"/>
+<defs>
+<marker id="ao" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#2563eb"/></marker>
+<marker id="ac" markerUnits="userSpaceOnUse" markerWidth="13" markerHeight="13" refX="8" refY="4" orient="auto"><path d="M0,0 L9,4 L0,8 Z" fill="#dc2626"/></marker>
+</defs>
+
+<text font-family="Noto Sans CJK SC" x="190" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">散度：穿过小闭合面的净流出</text>
+<rect x="145" y="150" width="90" height="90" fill="#eff6ff" stroke="#2563eb" stroke-width="2"/>
+<circle cx="190" cy="195" r="4" fill="#1a1a1a"/>
+<g stroke="#2563eb" stroke-width="2.2" marker-end="url(#ao)">
+<line x1="190" y1="150" x2="190" y2="112"/>
+<line x1="190" y1="240" x2="190" y2="278"/>
+<line x1="145" y1="195" x2="107" y2="195"/>
+<line x1="235" y1="195" x2="273" y2="195"/>
+<line x1="155" y1="160" x2="128" y2="133"/>
+<line x1="225" y1="160" x2="252" y2="133"/>
+<line x1="155" y1="230" x2="128" y2="257"/>
+<line x1="225" y1="230" x2="252" y2="257"/>
+</g>
+<text font-family="Noto Sans CJK SC" x="190" y="312" text-anchor="middle" font-size="13" fill="#2563eb">净流出量 ÷ 体积，再让体积 → 0</text>
+<text font-family="Noto Sans CJK SC" x="190" y="334" text-anchor="middle" font-size="12" fill="#6b7280">输出标量：这一点是源（冒）还是汇（吸）</text>
+
+<line x1="380" y1="20" x2="380" y2="380" stroke="#e5e7eb" stroke-width="2"/>
+
+<text font-family="Noto Sans CJK SC" x="570" y="34" text-anchor="middle" font-size="17" font-weight="600" fill="#1a1a1a">旋度：绕小闭合圈的净环流</text>
+<circle cx="570" cy="195" r="62" fill="#fef2f2" stroke="#fca5a5" stroke-width="1.4" stroke-dasharray="4 3"/>
+<g fill="none" stroke="#dc2626" stroke-width="2.6" marker-end="url(#ac)">
+<path d="M 631.1 205.8 A 62 62 0 0 1 559.2 256.9"/>
+<path d="M 549.2 256.9 A 62 62 0 0 1 508.9 205.8"/>
+<path d="M 508.9 184.2 A 62 62 0 0 1 549.2 133.1"/>
+<path d="M 559.2 133.1 A 62 62 0 0 1 631.1 184.2"/>
+</g>
+<g stroke="#1a1a1a" stroke-width="2.4" stroke-linecap="round">
+<line x1="570" y1="195" x2="570" y2="169"/>
+<line x1="570" y1="195" x2="596" y2="195"/>
+<line x1="570" y1="195" x2="570" y2="221"/>
+<line x1="570" y1="195" x2="544" y2="195"/>
+</g>
+<g fill="#1a1a1a" opacity="0.85">
+<path d="M 570 169 q 13 0 13 11 q -13 0 -13 -11 z"/>
+<path d="M 596 195 q 0 13 -11 13 q 0 -13 11 -13 z"/>
+<path d="M 570 221 q -13 0 -13 -11 q 13 0 13 11 z"/>
+<path d="M 544 195 q 0 -13 11 -13 q 0 13 -11 13 z"/>
+</g>
+<circle cx="570" cy="195" r="3.5" fill="#1a1a1a"/>
+<text font-family="Noto Sans CJK SC" x="570" y="312" text-anchor="middle" font-size="13" fill="#dc2626">绕圈环流 ÷ 面积，再让面积 → 0</text>
+<text font-family="Noto Sans CJK SC" x="570" y="334" text-anchor="middle" font-size="12" fill="#6b7280">输出矢量：插在这里的小风车转不转、朝哪转</text>
+
+<text font-family="Noto Sans CJK SC" x="380" y="374" text-anchor="middle" font-size="13" fill="#1a1a1a">两个定义的结构一模一样，区别只在于“穿过一个闭合面”还是“绕着一个闭合圈”</text>
+</svg>
