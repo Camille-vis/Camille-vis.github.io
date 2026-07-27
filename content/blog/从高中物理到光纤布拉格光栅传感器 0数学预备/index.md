@@ -469,9 +469,11 @@ $$
 **二阶（振荡）**：
 
 $$
-\frac{d^2y}{dx^2} + \omega_0^2 y = 0 \qquad\Longrightarrow\qquad 
-
-\\ y(x) = A\cos(\omega_0 x) + B\sin(\omega_0 x) \\ = C e^{i\omega_0 x} + D e^{-i\omega_0 x}
+\begin{aligned}
+\frac{d^2y}{dx^2} + \omega_0^2 y = 0 \quad\Longrightarrow\quad
+y(x) &= A\cos(\omega_0 x) + B\sin(\omega_0 x) \\
+     &= C e^{i\omega_0 x} + D e^{-i\omega_0 x}
+\end{aligned}
 $$
 
 **这是整个波动理论的心脏方程。** 弹簧振子、LC 电路、电磁波的空间分布、光纤中的模式分布——只要物理系统满足「回复力正比于偏离量」，最后都会化简到这个方程。
@@ -544,7 +546,10 @@ $$
 **这条求解路径的骨架值得记住**，以后遇到任何线性常系数方程都适用，不用死记不同方程对应什么解的形状：
 
 $$
-\text{微分方程}\ \to\ \text{设试探解 } e^{\lambda t}\ \to\ \text{变成关于 }\lambda\text{ 的代数方程}\ \to\ \\ \text{解出 }\lambda\ \to\ \text{实部虚部分别是衰减率和振荡频率}
+\begin{gathered}
+\text{微分方程}\ \to\ \text{设试探解 } e^{\lambda t}\ \to\ \text{变成关于 }\lambda\text{ 的代数方程} \\
+\to\ \text{解出 }\lambda\ \to\ \text{实部虚部分别是衰减率和振荡频率}
+\end{gathered}
 $$
 
 <details>

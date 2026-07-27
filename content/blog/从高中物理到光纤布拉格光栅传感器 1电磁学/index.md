@@ -452,10 +452,12 @@ $\vec H$ 和 $\vec B$ 只差一个常数因子，可以随时互换。
 把刚才打包出来的两条，和另外两条本来就干净、原样不动的两条并在一起，就是不带任何简化的**通用**介质中麦克斯韦方程组：
 
 $$
-\nabla\cdot\vec D=\rho_{\text{free}} \\
-\nabla\cdot\vec B=0 \\
-\nabla\times\vec E=-\frac{\partial\vec B}{\partial t} \\
-\nabla\times\vec H=\vec J_{\text{free}}+\frac{\partial\vec D}{\partial t}
+\begin{aligned}
+\nabla\cdot\vec D&=\rho_{\text{free}} \\
+\nabla\cdot\vec B&=0 \\
+\nabla\times\vec E&=-\frac{\partial\vec B}{\partial t} \\
+\nabla\times\vec H&=\vec J_{\text{free}}+\frac{\partial\vec D}{\partial t}
+\end{aligned}
 $$
 
 **这四条是精确的**，对任何介质、任何场强都成立——极化和磁化的全部效应，都已经藏进 $\vec D$ 和 $\vec H$ 的定义里了。近似只出现在本构关系（$\vec D=\varepsilon\vec E$、$\vec B=\mu_0\mu_r\vec H$）那一层。
