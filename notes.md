@@ -133,3 +133,14 @@
 - 排除了斜体方案：中文没有真正的斜体字形，浏览器靠几何倾斜硬造，小字号下会糊。
 
 位置维持在标题下、目录上（用户确认）。
+
+## 决策记录（追加，IndexNow 接入，2026-08-04）
+
+- **背景**：用户问怎么让搜索引擎及时抓新博客。查证结论——IndexNow 协议只被 Bing/Yandex/Naver/Seznam 采用，**Google 不支持**（试用过又放弃了，2026-02 前后的多个来源确认）。用户明确表示"能覆盖 Bing 就满意了，Google 爬虫够快，不用管"，所以只做 IndexNow，不追加 Google Indexing API（而且那个 API 本来就只对 JobPosting/BroadcastEvent 结构化数据开放，博客用不上，追加了也没用）。
+- **实现方式**：
+  - key 文件：`static/9b32de599c3545380a49343e51cdf9a6.txt`（32 位随机 hex，Claude 生成，内容就是 key 本身）。这个 key **不是账号凭证**，不需要在任何第三方平台注册——跟 GoatCounter 那种需要用户自己开账号的情况不一样，纯粹是域名归属校验用的随机字符串，所以这次直接由 Claude 生成实装，没有违反"不代管第三方账号"的规矩。
+  - `deploy.yml` 新增第三个 job `notify-indexnow`，`needs: deploy`（部署成功之后才跑，跟部署本身解耦）。build job 里新增一步把 `public/sitemap.xml` 存成普通 artifact（`actions/upload-artifact`，区别于原来给 `deploy-pages` 用的 pages-artifact，两者不通用，这是当时选型时踩的一个理解点：pages-artifact 只能被 `deploy-pages` 消费，普通 job 间传文件必须用另一套 artifact 机制）,notify-indexnow job 里 `download-artifact` 取回来，`grep -oP` 抽取所有 `<loc>` 里的 URL,`jq` 拼成 JSON 数组,POST 给 `https://api.indexnow.org/indexnow`。
+  - 策略是**每次全量提交 sitemap 里的所有 URL**，不做"只提交本次新增/改动文章"的增量判断——IndexNow 一天一万条配额，个人博客体量提交全量完全跑不满，图简单可靠优先于精细化。
+  - `continue-on-error: true` 挂在提交那一步，避免 IndexNow 端网络抖动时把整个 Actions run 标红，误导用户以为网站部署失败了。
+- **DNS/Cloudflare**：查过仓库和 notes 里没有任何 Cloudflare 相关配置记录，域名解析层面目前判断是走 GitHub Pages 默认方式，IndexNow 这次不需要额外动 DNS/CDN 配置。如果以后接入 Cloudflare 之类的代理型 DNS，需要回头检查其 Bot 管理规则有没有误伤 Bingbot。
+- **文档同步**：`编辑指南.md` 新增"八、搜索引擎收录（IndexNow）"一节，说明这是全自动、用户不需要操作，供以后排查用。

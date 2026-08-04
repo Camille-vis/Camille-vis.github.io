@@ -47,6 +47,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./public
+      # sitemap.xml 只在这个 job 里以本地文件形式存在(public/ 没有随 deploy-pages 流程外传),
+      # 存成普通 artifact 是为了让下面 notify-indexnow job 能在 deploy 完成之后取到它。
+      - name: Upload sitemap for IndexNow
+        uses: actions/upload-artifact@v4
+        with:
+          name: sitemap
+          path: public/sitemap.xml
 
   deploy:
     environment:
@@ -58,3 +65,25 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  notify-indexnow:
+    # 只推必应/Yandex 等支持 IndexNow 协议的搜索引擎;Google 不支持这个协议,
+    # 该 job 失败也不影响网站已经部署成功这件事,所以放在 deploy 之后、独立一个 job。
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Download sitemap
+        uses: actions/download-artifact@v4
+        with:
+          name: sitemap
+      - name: Submit all URLs to IndexNow
+        continue-on-error: true
+        run: |
+          KEY="9b32de599c3545380a49343e51cdf9a6"
+          HOST="lichengping.com"
+          KEY_LOCATION="https://lichengping.com/${KEY}.txt"
+          URL_LIST=$(grep -oP '(?<=<loc>)[^<]+' sitemap.xml | jq -R -s -c 'split("\n")[:-1]')
+          echo "提交 URL 列表: ${URL_LIST}"
+          curl -s -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            -d "{\"host\":\"${HOST}\",\"key\":\"${KEY}\",\"keyLocation\":\"${KEY_LOCATION}\",\"urlList\":${URL_LIST}}"
