@@ -158,17 +158,32 @@ h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
 .content pre code { background: none; padding: 0; }
 .content li { margin: 4px 0; }
 
-/* ---- 写作方式声明(每篇文章标题下方,front matter 写 aiNote: false 可关掉) ---- */
+/* ---- 写作方式声明(每篇文章标题下方,front matter 写 aiNote: false 可关掉) ----
+   刻意做得跟正文不同:更小的字号、更窄的行距、独立的底色块。
+   跟紧挨着的目录框(.toc)区分靠三点:底色更深、无圆角描边对比、字号更小。
+   不要用 border-left,那是 blockquote 的样式,会被误认成引用。 */
 .ai-note {
-  border-left: 3px solid #d8ccb4;
-  padding: 2px 0 2px 12px;
-  margin: 0 0 1.4rem;
+  background: #f5f0e2;
+  border: 1px solid #e2d8c0;
+  border-radius: 7px;
+  padding: 12px 15px;
+  margin: 0 0 1.1rem;
+  /* 换字体族是这里最关键的一笔:读者不用读内容,扫一眼就知道说话的人换了。
+     中文落到宋体(macOS: Songti SC / Windows: SimSun / Linux: Noto Serif CJK)。
+     宋体笔画比正文黑体细,所以字号给到 13px 而不是更小,否则整块发灰。 */
+  font-family: Georgia, "Times New Roman", "Songti SC", "Noto Serif CJK SC",
+               "Source Han Serif SC", "SimSun", serif;
   font-size: 13px;
-  line-height: 1.65;
-  color: #6b5f4d;
+  line-height: 1.75;
+  color: #5d5245;
 }
-.ai-note p { margin: 4px 0; }
+.ai-note p { margin: 3px 0; }
+.ai-note p:first-child { margin-top: 0; }
+.ai-note p:last-child { margin-bottom: 0; }
+.ai-note strong { color: #6b5a4a; font-weight: 700; }
 .ai-note a { color: #bc5e3c; text-decoration: none; }
+.ai-note a:hover { text-decoration: underline; }
+.ai-note code { background: #e8dfc9; font-size: 12px; }
 
 /* ---- 文章目录(front matter 里 toc: true 才出现) ---- */
 .toc {
