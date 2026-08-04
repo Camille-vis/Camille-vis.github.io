@@ -7,6 +7,9 @@
 <link rel="stylesheet" href="{{ "css/style.css" | relURL }}">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ "favicon.png" | relURL }}">
+{{ with .OutputFormats.Get "RSS" }}
+<link rel="alternate" type="{{ .MediaType.Type }}" href="{{ .Permalink }}" title="{{ $.Site.Title }}">
+{{ end }}
 {{ block "head" . }}{{ end }}
 </head>
 <body>

@@ -144,3 +144,11 @@
   - `continue-on-error: true` 挂在提交那一步，避免 IndexNow 端网络抖动时把整个 Actions run 标红，误导用户以为网站部署失败了。
 - **DNS/Cloudflare**：查过仓库和 notes 里没有任何 Cloudflare 相关配置记录，域名解析层面目前判断是走 GitHub Pages 默认方式，IndexNow 这次不需要额外动 DNS/CDN 配置。如果以后接入 Cloudflare 之类的代理型 DNS，需要回头检查其 Bot 管理规则有没有误伤 Bingbot。
 - **文档同步**：`编辑指南.md` 新增"八、搜索引擎收录（IndexNow）"一节，说明这是全自动、用户不需要操作，供以后排查用。
+
+## 决策记录（追加，RSS discovery + 首页订阅按钮，2026-08-04）
+
+- **背景**：Hugo 默认就会给每个 section 生成 RSS（`index.xml`），这个骨架没关掉这个 output kind，所以 `/index.xml`（全站）和 `/blog/index.xml`（博客）其实**一直都在正常生成**，只是没人知道——`baseof.html` 没有声明这个 feed 的存在。用户判断"低频更新恰恰更需要 RSS"（读者不用记着回来看），认同后决定做两件小事，都不涉及新起服务或账号。
+- **改动一：discovery 标签**。`layouts/_default/baseof.html` 的 `<head>` 里加了 `{{ with .OutputFormats.Get "RSS" }}<link rel="alternate" ...>{{ end }}`——这是 Hugo 官方推荐写法，`.OutputFormats.Get` 会按当前页面上下文自动选对应的 feed（首页拿到 `/index.xml`，博客列表页/文章页拿到 `/blog/index.xml`），不用手写死链接，也不用为不同页面写不同模板。
+- **改动二：首页复古橙色 RSS 按钮**。用户原话是"很多年前看到的 RSS 是这样的"，指的是 2000 年代博客常见的那种纯橙色方块图标。`layouts/index.html` 在 `.contact` 区块加了一个 `<a class="rss-badge">`，内嵌一个小 SVG（标准 feed 图标的雷达波纹路径），链到 `blog/index.xml`。样式 `.rss-badge` 在 `static/css/style.css`，故意用 `#ee6a1a` 这个跟网站主题色（`#bc5e3c` 系）不同的橙色——**这是刻意的怀旧设计，不是配色失误**，以后统一改色调时这个按钮不用跟着改。
+- **一个顺手修的小问题**：`.contact` 这个 div 原来整个包在 `{{ if .Params.github }}` 里，因为 `github` 字段目前是空的（占位未填），这个 div 现在整体不渲染——如果 RSS 按钮直接塞进去，会跟着 github 链接一起被隐藏，等于白做。改成先渲染 `.contact` 外壳，`github` 链接单独判断是否显示,RSS 按钮不受影响。**这个改动的副作用**：等用户以后填了真实 GitHub 链接，`.contact` 的展示逻辑不用再改，本来就是对的结构。
+- **验证**：还是那句老话——沙盒装不上 Hugo，这次的模板改动（Go template 语法、SVG 内嵌）没跑过真实构建，用户本机 `hugo server -D` 时留意一下首页右下角（contact 区域）有没有正常显示橙色 RSS 按钮，浏览器地址栏有没有出现订阅图标。

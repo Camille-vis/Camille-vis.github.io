@@ -16,11 +16,17 @@
 
   <div class="bio">{{ .Content }}</div>
 
-  {{ if .Params.github }}
   <div class="contact">
+    {{ if .Params.github }}
     <span><a href="{{ .Params.github }}">{{ .Params.github }}</a></span>
+    {{ end }}
+    <a class="rss-badge" href="{{ "blog/index.xml" | relURL }}" title="Subscribe via RSS" aria-label="RSS Feed">
+      <svg viewBox="0 0 8 8" width="11" height="11" fill="#fff" aria-hidden="true">
+        <path d="M1 1v2c2.76 0 5 2.24 5 5h2c0-3.87-3.13-7-7-7zm0 3v2c1.1 0 2 .9 2 2h2c0-2.21-1.79-4-4-4zM2 6a1 1 0 100 2 1 1 0 000-2z"/>
+      </svg>
+      RSS
+    </a>
   </div>
-  {{ end }}
 
   {{ if .Site.Data.experience }}
   <div class="section">

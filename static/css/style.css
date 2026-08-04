@@ -30,8 +30,26 @@ h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
 .quote { font-style: italic; font-size: 14px; color: #6b5a4a; margin: 0 0 2px; }
 .quote-source { font-size: 12px; color: #948a78; margin: 0 0 1.5rem; }
 .bio { font-size: 15px; margin-bottom: 1.5rem; }
-.contact { display: flex; gap: 20px; font-size: 13px; color: #555; margin-bottom: 20px; }
+.contact { display: flex; align-items: center; gap: 20px; font-size: 13px; color: #555; margin-bottom: 20px; }
 .contact a { color: #bc5e3c; text-decoration: none; }
+
+/* ---- RSS 按钮:刻意复刻 2000 年代博客常见的橙色方块图标,不跟站点其他配色统一 ----
+   这是有意的怀旧设计,不是配色失误,别为了跟主题色一致把它改淡。 */
+.rss-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: #ee6a1a;
+  color: #fff !important;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  text-decoration: none !important;
+  line-height: 1;
+}
+.rss-badge:hover { background: #d95d10; }
 .section { border-top: 1px solid #e6ddc9; padding-top: 14px; margin-bottom: 20px; }
 .label { font-size: 13px; color: #bc5e3c; margin: 0 0 6px; font-weight: 600; }
 .patent { font-size: 14px; margin: 0 0 4px; }
