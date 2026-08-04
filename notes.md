@@ -152,3 +152,17 @@
 - **改动二：首页复古橙色 RSS 按钮**。用户原话是"很多年前看到的 RSS 是这样的"，指的是 2000 年代博客常见的那种纯橙色方块图标。`layouts/index.html` 在 `.contact` 区块加了一个 `<a class="rss-badge">`，内嵌一个小 SVG（标准 feed 图标的雷达波纹路径），链到 `blog/index.xml`。样式 `.rss-badge` 在 `static/css/style.css`，故意用 `#ee6a1a` 这个跟网站主题色（`#bc5e3c` 系）不同的橙色——**这是刻意的怀旧设计，不是配色失误**，以后统一改色调时这个按钮不用跟着改。
 - **一个顺手修的小问题**：`.contact` 这个 div 原来整个包在 `{{ if .Params.github }}` 里，因为 `github` 字段目前是空的（占位未填），这个 div 现在整体不渲染——如果 RSS 按钮直接塞进去，会跟着 github 链接一起被隐藏，等于白做。改成先渲染 `.contact` 外壳，`github` 链接单独判断是否显示,RSS 按钮不受影响。**这个改动的副作用**：等用户以后填了真实 GitHub 链接，`.contact` 的展示逻辑不用再改，本来就是对的结构。
 - **验证**：还是那句老话——沙盒装不上 Hugo，这次的模板改动（Go template 语法、SVG 内嵌）没跑过真实构建，用户本机 `hugo server -D` 时留意一下首页右下角（contact 区域）有没有正常显示橙色 RSS 按钮，浏览器地址栏有没有出现订阅图标。
+
+## 决策记录（追加，RSS 折叠说明文案，2026-08-04）
+
+- **背景**：RSS 按钮加上之后，用户提出"华语用户很少用 RSS"，想在按钮旁边加一段折叠说明,讲清楚为什么值得订阅。写作过程分两轮：
+  1. 第一版角度是"低频更新站更需要 RSS"（避免读者白跑/漏更新），这版是 Claude 对用户说话的语气，用户指出这版需要改写成**对访客说话**的口吻。
+  2. 用户自己给了第二版角度——**从推荐算法手里拿回信息筛选权，反信息茧房**,并明确说"我不确定我说的对不对"，主动邀请 Claude 判断。Claude 的判断：框架基本站得住脚，但有一处该抠精度——RSS 消除的是"算法二次筛选排序"这一层，不等于自动保证不被困在茧房里（如果自己只订阅同质信源，一样会形成茧房，只是这次是自己选的）。最终文案把"保证不被困"改成了"拿回筛选权"，保留了用户的核心论点，没有推翻。
+- **第三轮加了实操信息**（本次）：用户追问"Thunderbird 这类邮箱客户端支不支持 RSS，还有哪些常见软件/知名站点支持"，Claude 联网核实后确认：
+  - 桌面邮箱：Thunderbird 原生支持（且未计划做到移动端）；经典版 Outlook 支持，但**新版 Outlook for Windows 已经砍掉 RSS 功能**；苹果 Mail 自 OS X Mountain Lion（10.8，约 2012 年）起就已移除。
+  - 浏览器：Vivaldi 侧边栏内置 RSS 阅读器；Chrome/Safari/当前版 Firefox 都没有原生 RSS。
+  - 移动端：iOS/Android 系统自带邮件/新闻 App 都不支持,绕不开装第三方——常见选择 NetNewsWire（iOS，免费开源）、Feeder（Android，免费开源）、Feedly/Inoreader（跨平台）。
+  - 知名站点仍支持 RSS：GitHub（仓库 releases/commits）、Reddit（`.rss` 后缀）、YouTube（频道 feed）、Wikipedia、主流新闻机构、大多数 WordPress 站点。
+  - 这些查证结果整合进了折叠框正文，用来支撑"真正做事的站点还在支持 RSS，不是过时功能"这句话，不是凭印象写的。
+- **最终文案落地位置**：`layouts/index.html`，`<details class="rss-note">`，紧跟在 RSS 按钮所在的 `.contact` 区块之后。样式 `.rss-note` 加在 `static/css/style.css`，复用了正文 `.toc` 那一套折叠框视觉语言（边框、底色、箭头图标随展开转向），保持全站折叠内容的视觉一致性。
+- **注意**：这个 `<details>` 是写在 Hugo 模板文件（`layouts/index.html`）里的原生 HTML，不是 Markdown 正文，不依赖 `hugo.toml` 里 `unsafe = true` 那个 goldmark 配置——那个配置只影响 `content/` 下经过 Markdown 渲染的内容，模板文件本身输出的 HTML 从来不需要这个开关。

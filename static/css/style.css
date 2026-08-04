@@ -50,6 +50,37 @@ h2 { font-size: 17px; margin: 0 0 12px; font-weight: 600; }
   line-height: 1;
 }
 .rss-badge:hover { background: #d95d10; }
+
+/* ---- 首页"这年头还用 RSS?"折叠说明,跟正文里的 .toc 同一套视觉语言 ---- */
+.rss-note {
+  border: 1px solid #e6ddc9;
+  background: #fdfaf2;
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin: 0 0 20px;
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: #5d5245;
+}
+.rss-note summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: #bc5e3c;
+  list-style: none;
+}
+.rss-note summary::-webkit-details-marker { display: none; }
+.rss-note summary::before {
+  content: "▶";
+  display: inline-block;
+  margin-right: 6px;
+  font-size: 11px;
+  transition: transform 0.15s ease;
+}
+.rss-note[open] summary::before { transform: rotate(90deg); }
+.rss-note[open] summary { margin-bottom: 8px; }
+.rss-note p { margin: 8px 0 0; }
+.rss-note p:first-of-type { margin-top: 0; }
+.rss-note strong { color: #6b5a4a; font-weight: 700; }
 .section { border-top: 1px solid #e6ddc9; padding-top: 14px; margin-bottom: 20px; }
 .label { font-size: 13px; color: #bc5e3c; margin: 0 0 6px; font-weight: 600; }
 .patent { font-size: 14px; margin: 0 0 4px; }
