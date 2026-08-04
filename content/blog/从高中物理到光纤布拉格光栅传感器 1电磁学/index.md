@@ -1,10 +1,11 @@
 ---
 title: "从高中物理到光纤布拉格光栅传感器 1电磁学"
-date: 2026-07-26
+date: 2026-07-28
 tags: ["FBG"]
 math: true
 mermaid: true
 toc: true
+aiNote: false  # FBG 系列在文章开头已自述 Claude 的参与,不重复
 draft: false
 ---
 

@@ -5,6 +5,7 @@ date: 2026-07-26
 tags: ["FBG", "番外"]
 math: true
 toc: true
+aiNote: false  # FBG 系列在文章开头已自述 Claude 的参与,不重复
 draft: true
 ---
 

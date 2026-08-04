@@ -3,6 +3,25 @@
 <a href="/" class="back">← Home</a>
 <h1>{{ .Title }}</h1>
 <p class="muted">{{ .Date.Format "2006-01-02" }}{{ if .Params.tags }} · {{ range $i, $t := .GetTerms "tags" }}{{ if $i }}, {{ end }}<a href="{{ $t.RelPermalink }}" class="tag-link">{{ $t.Title }}</a>{{ end }}{{ end }}</p>
+{{/* ---- 写作方式声明 ----
+     正常情况下文字写在文章自己的 front matter 里(hugo new 会自动带上),
+     你在草稿阶段可以直接改那段文字。
+     front matter 没写 aiNote 时,退回到下面这段站点默认措辞。
+     想让某篇完全不显示: front matter 写  aiNote: false
+     ------------------------------------------------------------ */}}
+{{ $note := .Params.aiNote }}
+{{ $hide := false }}
+{{ if eq (printf "%v" $note) "false" }}{{ $hide = true }}{{ end }}
+{{ if not $hide }}
+<div class="ai-note">
+{{- if $note -}}
+  {{ $note | markdownify }}
+{{- else -}}
+  <p><strong>写作方式</strong>：选题、取舍和最终把关由我本人负责;检索、推导、数值计算与行文由 Claude 与我共同完成。关键数据都注明了出处,数值结论我尽量交叉验证过,但不保证每一条都亲自复核。</p>
+  <p>文章署我的名,所以出现的错误就是我的错误——欢迎写信指出,邮箱在<a href="/">首页</a>。</p>
+{{- end -}}
+</div>
+{{ end }}
 {{ if .Params.toc }}<details class="toc" open><summary>目录</summary>{{ .TableOfContents }}</details>{{ end }}
 <div class="content">{{ .Content }}</div>
 </div>

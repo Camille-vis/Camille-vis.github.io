@@ -4,6 +4,7 @@ date: 2026-07-25
 tags: ["FBG"]
 math: true
 mermaid: true
+aiNote: false  # FBG 系列在文章开头已自述 Claude 的参与,不重复
 draft: true
 ---
 

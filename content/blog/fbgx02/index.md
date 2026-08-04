@@ -6,6 +6,7 @@ tags: ["FBG", "番外"]
 math: true
 mermaid: true
 toc: true
+aiNote: false  # FBG 系列在文章开头已自述 Claude 的参与,不重复
 draft: true
 ---
 
