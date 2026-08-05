@@ -166,3 +166,9 @@
   - 这些查证结果整合进了折叠框正文，用来支撑"真正做事的站点还在支持 RSS，不是过时功能"这句话，不是凭印象写的。
 - **最终文案落地位置**：`layouts/index.html`，`<details class="rss-note">`，紧跟在 RSS 按钮所在的 `.contact` 区块之后。样式 `.rss-note` 加在 `static/css/style.css`，复用了正文 `.toc` 那一套折叠框视觉语言（边框、底色、箭头图标随展开转向），保持全站折叠内容的视觉一致性。
 - **注意**：这个 `<details>` 是写在 Hugo 模板文件（`layouts/index.html`）里的原生 HTML，不是 Markdown 正文，不依赖 `hugo.toml` 里 `unsafe = true` 那个 goldmark 配置——那个配置只影响 `content/` 下经过 Markdown 渲染的内容，模板文件本身输出的 HTML 从来不需要这个开关。
+
+## 决策记录（追加，RSS 说明改双语，2026-08-04）
+
+- **背景**：用户要求这个折叠说明做成双语，先出草稿定版式再实装。第一版给了"逐段英文紧跟对应中文"的排法，用户选了另一种——**整段英文 + 分隔线 + 整段中文**，理由是更好读（不用逐段切换语言）。
+- **实现**：`layouts/index.html` 里 `<details class="rss-note">` 的结构变成：标题双语同一行（`Why RSS, even today? / 这年头还用 RSS？`，英文在前）→ 四段英文正文 → 一条 `<hr class="rss-note-divider">` → 四段中文正文（原文不变）。分隔线样式加在 `static/css/style.css`，一条 1px 细线，跟 `.content hr` 的颜色（`#e0d6c0`）保持一致但单独定义了类名，因为这个折叠框在 `.content` 作用域之外。
+- **英文文案不是逐字直译**，是按英文表达习惯重新组织的（比如"这年头还用 RSS"译成"Why RSS, even today?"而不是字面的"still using RSS these years"），核心论点（算法筛选权、不装新软件也能订阅、知名站点仍支持）跟中文版一一对应，没有增删实质内容。
