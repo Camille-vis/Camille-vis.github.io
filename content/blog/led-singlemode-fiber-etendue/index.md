@@ -258,7 +258,19 @@ $$
 L_{\text{moon}} = \frac{F_{\odot} \times A}{\pi} = \frac{1361 \times 0.12}{\pi} \approx 52 \ \mathrm{W/(m^2 \cdot sr)}
 $$
 
-对比太阳表面 $L_{\odot} \approx 2.0 \times 10^7 \ \mathrm{W/(m^2 \cdot sr)}$，太阳的辐射亮度约是月面的 **38 万倍**。亮度守恒告诉我们，透镜像面上的辐射亮度不可能超过源的辐射亮度。对应的等效黑体温度为：
+对比太阳表面 $L_{\odot} \approx 2.0 \times 10^7 \ \mathrm{W/(m^2 \cdot sr)}$，太阳的辐射亮度约是月面的 **38 万倍**。这个巨大的比值可以拆成三个独立因子：
+
+$$
+\frac{L_{\odot}}{L_{\text{moon}}} = \frac{\pi}{\Omega_{\odot} \times A} \approx \frac{3.14}{6.8 \times 10^{-5} \times 0.12} \approx 3.8 \times 10^5
+$$
+
+- $1/\Omega_{\odot} \approx 14\,700$：太阳在月球轨道处只占约 $6.8 \times 10^{-5} \ \mathrm{sr}$ 的立体角，月面每一小块只"看见"这么小一个太阳盘面
+- $1/A \approx 8.3$：月面是很暗的岩石，albedo 只有 0.12，吞掉了 88% 的入射光
+- $\pi \approx 3.14$：反射光按朗伯余弦律散射到半球，等效立体角为 $\pi \ \mathrm{sr}$（不是半球的几何立体角 $2\pi$，因为余弦加权把斜方向打了折扣）
+
+三者相乘：$14\,700 \times 8.3 \times 3.14 \approx 38$ 万。每一个因子都在削弱月光的辐射亮度，而透镜对此无能为力。
+
+亮度守恒告诉我们，透镜像面上的辐射亮度不可能超过源的辐射亮度。对应的等效黑体温度为：
 
 $$
 T_{\max} = \left(\frac{\pi L_{\text{moon}}}{\sigma}\right)^{1/4} = \left(\frac{1361 \times 0.12}{5.67 \times 10^{-8}}\right)^{1/4} \approx 232 \text{ K}
