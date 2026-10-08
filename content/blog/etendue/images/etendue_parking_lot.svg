@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" font-family="'Helvetica Neue', Arial, sans-serif">
+  <!-- Background -->
+  <rect width="600" height="380" fill="#fafafa" rx="8"/>
+
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-size="15" fill="#333" font-weight="600">光线"停车场"：位置 × 方向 = 总容量</text>
+
+  <!-- ===== Grid ===== -->
+  <!-- Grid background -->
+  <rect x="120" y="80" width="360" height="210" fill="none" stroke="#999" stroke-width="1.5" rx="3"/>
+
+  <!-- Vertical lines (4 columns) -->
+  <line x1="210" y1="80" x2="210" y2="290" stroke="#ccc" stroke-width="1"/>
+  <line x1="300" y1="80" x2="300" y2="290" stroke="#ccc" stroke-width="1"/>
+  <line x1="390" y1="80" x2="390" y2="290" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Horizontal lines (3 rows) -->
+  <line x1="120" y1="150" x2="480" y2="150" stroke="#ccc" stroke-width="1"/>
+  <line x1="120" y1="220" x2="480" y2="220" stroke="#ccc" stroke-width="1"/>
+
+  <!-- Column headers: Direction -->
+  <text x="165" y="70" text-anchor="middle" font-size="12" fill="#2563eb">方向 1</text>
+  <text x="255" y="70" text-anchor="middle" font-size="12" fill="#2563eb">方向 2</text>
+  <text x="345" y="70" text-anchor="middle" font-size="12" fill="#2563eb">方向 3</text>
+  <text x="435" y="70" text-anchor="middle" font-size="12" fill="#2563eb">方向 4</text>
+
+  <!-- Row headers: Position -->
+  <text x="110" y="120" text-anchor="end" font-size="12" fill="#dc2626">位置 1</text>
+  <text x="110" y="190" text-anchor="end" font-size="12" fill="#dc2626">位置 2</text>
+  <text x="110" y="260" text-anchor="end" font-size="12" fill="#dc2626">位置 3</text>
+
+  <!-- Light ray dots in cells -->
+  <g fill="#f59e0b" opacity="0.8">
+    <!-- Row 1 -->
+    <circle cx="165" cy="115" r="8"/>
+    <circle cx="255" cy="115" r="8"/>
+    <circle cx="345" cy="115" r="8"/>
+    <circle cx="435" cy="115" r="8"/>
+    <!-- Row 2 -->
+    <circle cx="165" cy="185" r="8"/>
+    <circle cx="255" cy="185" r="8"/>
+    <circle cx="345" cy="185" r="8"/>
+    <circle cx="435" cy="185" r="8"/>
+    <!-- Row 3 -->
+    <circle cx="165" cy="255" r="8"/>
+    <circle cx="255" cy="255" r="8"/>
+    <circle cx="345" cy="255" r="8"/>
+    <circle cx="435" cy="255" r="8"/>
+  </g>
+
+  <!-- Ray symbols in dots -->
+  <g font-size="10" fill="#fff" text-anchor="middle" font-weight="bold">
+    <text x="165" y="119">→</text><text x="255" y="119">↗</text><text x="345" y="119">↑</text><text x="435" y="119">↖</text>
+    <text x="165" y="189">→</text><text x="255" y="189">↗</text><text x="345" y="189">↑</text><text x="435" y="189">↖</text>
+    <text x="165" y="259">→</text><text x="255" y="259">↗</text><text x="345" y="259">↑</text><text x="435" y="259">↖</text>
+  </g>
+
+  <!-- Axis labels with brackets -->
+  <!-- Top: Direction dimension -->
+  <line x1="120" y1="48" x2="480" y2="48" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="120" y1="44" x2="120" y2="52" stroke="#2563eb" stroke-width="1.5"/>
+  <line x1="480" y1="44" x2="480" y2="52" stroke="#2563eb" stroke-width="1.5"/>
+  <text x="300" y="44" text-anchor="middle" font-size="13" fill="#2563eb" font-weight="600">方向维度（立体角 Ω）→ 4 个槽位</text>
+
+  <!-- Left: Position dimension -->
+  <line x1="60" y1="80" x2="60" y2="290" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="56" y1="80" x2="64" y2="80" stroke="#dc2626" stroke-width="1.5"/>
+  <line x1="56" y1="290" x2="64" y2="290" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="52" y="190" text-anchor="middle" font-size="13" fill="#dc2626" font-weight="600" transform="rotate(-90,52,190)">位置维度（面积 A）→ 3 个槽位</text>
+
+  <!-- ===== Bottom equation ===== -->
+  <text x="300" y="330" text-anchor="middle" font-size="15" fill="#333" font-weight="600">Étendue = 3 × 4 = 12 条可区分的光线</text>
+  <text x="300" y="355" text-anchor="middle" font-size="13" fill="#777">各一次方：位置和方向是两个独立维度，各贡献一个因子</text>
+</svg>
