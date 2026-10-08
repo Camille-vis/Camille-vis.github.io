@@ -255,10 +255,10 @@ $$
 推导只需要一步。月球不是自发光体，它是一个漫反射体：把接收到的太阳光以 albedo（反照率）$A \approx 0.12$ 大致均匀地散射到半球。月面的辐射亮度为：
 
 $$
-L_{\text{moon}} = \frac{F_{\odot} \times A}{\pi} = \frac{1361 \times 0.12}{\pi} \approx 52 \text{ W/(m²·sr)}
+L_{\text{moon}} = \frac{F_{\odot} \times A}{\pi} = \frac{1361 \times 0.12}{\pi} \approx 52 \ \mathrm{W/(m^2 \cdot sr)}
 $$
 
-对比太阳表面 $L_{\odot} \approx 2.0 \times 10^7$ W/(m²·sr)，月光的辐射亮度只有太阳的 $2.6 \times 10^{-6}$。亮度守恒告诉我们，透镜像面上的辐射亮度不可能超过源的辐射亮度。对应的等效黑体温度为：
+对比太阳表面 $L_{\odot} \approx 2.0 \times 10^7 \ \mathrm{W/(m^2 \cdot sr)}$，太阳的辐射亮度约是月面的 **38 万倍**。亮度守恒告诉我们，透镜像面上的辐射亮度不可能超过源的辐射亮度。对应的等效黑体温度为：
 
 $$
 T_{\max} = \left(\frac{\pi L_{\text{moon}}}{\sigma}\right)^{1/4} = \left(\frac{1361 \times 0.12}{5.67 \times 10^{-8}}\right)^{1/4} \approx 232 \text{ K}
