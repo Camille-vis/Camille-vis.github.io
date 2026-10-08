@@ -1,7 +1,7 @@
 ---
-title: "为什么放大镜不能超越太阳——Étendue 守恒定律"
+title: "为什么 LED 模块很难耦合入单模光纤——Étendue 守恒定律"
 date: 2026-10-08
-tags: [optics, etendue, thermodynamics, fiber-optics]
+tags: [optics, Étendue, thermodynamics, fiber-optics]
 math: true
 mermaid: false
 toc: true
