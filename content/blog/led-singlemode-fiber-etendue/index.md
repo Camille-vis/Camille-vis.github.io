@@ -76,22 +76,75 @@ aiNote: |
 
 Étendue 就是同时刻画这两者的物理量——一束光在空间和角度上的"铺展范围"。
 
-## 3. 定义
+## 3. 定义：$n^2$ 从哪里来
 
-对于经过某个截面的一束光，Étendue 的微分形式为：
+对于经过某个截面的一束光，最直觉的几何量是"有效面积 × 立体角"：
+
+$$
+dG_0 = dA \, \cos\theta \, d\Omega
+$$
+
+其中 $dA$ 是面积元，$\theta$ 是光线方向与面法线的夹角，$d\Omega$ 是立体角元。$\cos\theta$ 的出现很自然：一个面元从斜方向看过去，有效面积缩小为 $dA\cos\theta$。
+
+如果光始终在同一种介质中传播，这个定义就够了。但光会穿过界面——空气到玻璃，玻璃到光纤芯层。穿过界面时面积不变，角度却会变。$dG_0$ 还守恒吗？
+
+### 让 Snell 定律来回答
+
+考虑一束细光束以角度 $\theta_1$ 入射到折射率从 $n_1$ 变为 $n_2$ 的平界面上。界面处面积元 $dA$ 两侧共享。Snell 定律：
+
+$$
+n_1 \sin\theta_1 = n_2 \sin\theta_2
+$$
+
+光束在入射侧占据立体角元 $d\Omega_1 = \sin\theta_1 \, d\theta_1 \, d\varphi$，出射侧为 $d\Omega_2 = \sin\theta_2 \, d\theta_2 \, d\varphi$。方位角 $d\varphi$ 在折射中不变（折射发生在入射面内），所以只需要追踪 $\theta$ 方向的变化。
+
+对 Snell 定律两边微分：
+
+$$
+n_1 \cos\theta_1 \, d\theta_1 = n_2 \cos\theta_2 \, d\theta_2
+$$
+
+现在检验朴素定义 $dG_0$ 是否跨界面守恒。把入射侧展开：
+
+$$
+dA \cos\theta_1 \, d\Omega_1 = dA \cos\theta_1 \sin\theta_1 \, d\theta_1 \, d\varphi
+$$
+
+利用 Snell 定律，把 $\sin\theta_1$ 和 $d\theta_1$ 换成出射侧的量：
+
+$$
+\sin\theta_1 = \frac{n_2}{n_1}\sin\theta_2, \qquad d\theta_1 = \frac{n_2\cos\theta_2}{n_1\cos\theta_1}\,d\theta_2
+$$
+
+代入后，注意 $\cos\theta_1$ 在分子分母中恰好约掉：
+
+$$
+dA \cos\theta_1 \cdot \frac{n_2}{n_1}\sin\theta_2 \cdot \frac{n_2\cos\theta_2}{n_1\cos\theta_1}\,d\theta_2\,d\varphi = \frac{n_2^2}{n_1^2}\,dA\cos\theta_2\,d\Omega_2
+$$
+
+即：
+
+$$
+dA\cos\theta_1\,d\Omega_1 = \frac{n_2^2}{n_1^2}\,dA\cos\theta_2\,d\Omega_2
+$$
+
+**朴素定义不守恒**——出射侧多了一个 $n_2^2/n_1^2$ 因子。但如果把 $n^2$ 乘进定义，两边就严格相等了：
+
+$$
+n_1^2\,dA\cos\theta_1\,d\Omega_1 = n_2^2\,dA\cos\theta_2\,d\Omega_2
+$$
+
+这就是 Étendue 的正确微分形式：
 
 $$
 dG = n^2 \, dA \, \cos\theta \, d\Omega
 $$
 
-其中：
+$n^2$ 不是人为添加的修饰因子。它是 Snell 定律逼出来的——**要让 Étendue 在折射界面上守恒，定义中必须包含 $n^2$。**
 
-- $n$：介质折射率
-- $dA$：面积元
-- $\theta$：光线方向与面法线的夹角
-- $d\Omega$：立体角元
+物理上，折射率高的介质中光线的角度扩散被"压缩"了（$\sin\theta_2 < \sin\theta_1$ 当 $n_2 > n_1$），$n^2$ 正是补偿这种角度压缩的因子。至于为什么恰好是**平方**而不是一次方——因为立体角是二维的（$\theta$ 和 $\varphi$ 两个方向），Snell 定律在每个方向上各贡献一个 $n$ 的缩放，两个方向合起来就是 $n^2$。
 
-$\cos\theta$ 的出现很自然：一个面元从斜方向看过去，有效面积缩小为 $dA\cos\theta$。
+### 积分形式与守恒律
 
 对整个光束积分：
 
